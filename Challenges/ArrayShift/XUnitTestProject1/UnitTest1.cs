@@ -22,5 +22,12 @@ namespace XUnitTestProject1
             Assert.Equal(returnArray, Program.ArrayShift(array, 5));
         }
 
+        [Fact]
+        public void Test3()
+        {
+            int[] array = { 4, 8, 15, 23, 42 };
+            int[] returnArray = { 4, 8, 15, 16, 23, 42 };
+            Assert.Equal(returnArray, Program.ArrayShift(array, 16));
+        }
     }
 }

@@ -6,7 +6,8 @@ namespace ArrayShift
     {
         static void Main(string[] args)
         {
-
+            int[] array = { 1, 2, 3, 4 };
+            ArrayShift(array, 5);
         }
 
         public static int[] ArrayShift(int[] array, int num)
