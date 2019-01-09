@@ -2,18 +2,18 @@
 
 namespace ArrayShift
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            
+
         }
 
-        static int[] ArrayShift(int[] array, int num)
+        public static int[] ArrayShift(int[] array, int num)
         {
             int arrayLength = array.Length;
             int arrayMidpoint = arrayLength / 2;
-            int[] newArray = { arrayLength + 1 };
+            int[] newArray = new int[ arrayLength + 1 ];
 
             for(int i = 0; i < arrayMidpoint; i++)
             {
