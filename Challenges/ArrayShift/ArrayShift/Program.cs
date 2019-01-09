@@ -22,7 +22,7 @@ namespace ArrayShift
 
             newArray[arrayMidpoint] = num;
 
-            for(int i = arrayMidpoint + 1; i < arrayLength; i++)
+            for(int i = arrayMidpoint + 1; i < newArray.Length; i++)
             {
                 newArray[i] = array[i - 1];
             }
