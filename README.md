@@ -2,4 +2,4 @@
 
 ## Table of Contents
 
-1. [Challenge: Name Here](Challenges/#)
+1. [Challenge: Array Shift](Challenges/ArrayShift)
