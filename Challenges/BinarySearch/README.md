@@ -8,11 +8,9 @@ Write a function called `BinarySearch` which takes in 2 parameters: a sorted arr
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-Big O Time = O(n) // Big O Space = O(n)
+Big O Time = O(log n) // Big O Space = O(1)
 
-To approach this challenge, we made a new array one index longer than the input array.
-After determining the midpoint of the input array, we use two for loops to iterate through
-both halves of the new array, inserting the original values before and after the new value.
+To approach this challenge, we created a function to accept a sorted array and a search key. The function calculates the min and max indices of the array and moves into a while loop to calculate the midpoint index of the array and compare the key to the value at that index. If the key is less than the value, the max is reset to mid-1 and the loop restarts. If the key is greater than the value, the min is reset to mid+1 and the loop restarts. The process is repeated, "halving" the remaining sections of the array until the value is found. If it is not found, the function returns -1.
 
 ## Solution
 <!-- Embedded whiteboard image -->
