@@ -14,10 +14,19 @@ namespace XUnitTestProject1
         }
 
         [Fact]
-        public void TestNumberFound()
+        public void TestNumberFoundAtMax()
         {
             int[] array = { 1, 2, 3, 4, 5 };
             Assert.Equal(4, Program.BinarySearch(array, 5));
         }
+
+        [Fact]
+        public void TestNumberFoundAtMin()
+        {
+            int[] array = { 1, 2, 3, 4, 5 };
+            Assert.Equal(0, Program.BinarySearch(array, 1));
+        }
+
+      
     }
 }
