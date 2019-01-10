@@ -27,6 +27,11 @@ namespace XUnitTestProject1
             Assert.Equal(0, Program.BinarySearch(array, 1));
         }
 
-      
+        [Fact]
+        public void TestNumberNotFound()
+        {
+            int[] array = { 1, 2, 3, 4, 5 };
+            Assert.Equal(-1, Program.BinarySearch(array, 6));
+        }
     }
 }
