@@ -14,4 +14,5 @@ To approach this challenge, we created a function to accept a sorted array and a
 
 ## Solution
 <!-- Embedded whiteboard image -->
+Note that we realized after beginning to code the solution that we originally took the wrong approach to this challenge. This is reflected in the image below.
 ![Binary Search](../../assets/BinarySearch.jpeg)
