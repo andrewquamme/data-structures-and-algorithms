@@ -39,6 +39,33 @@ namespace LinkedListTests
 
     public class InsertTests
     {
-        
+        [Fact]
+        public void TestInsertion()
+        {
+            LList list = new LList();
+            list.Insert(2);
+            int[] expected = { 2, 0 };
+            int[] actual = { list.Head.Value, list.Head.Next.Value };
+            Assert.Equal(expected, actual);
+        }
+    }
+
+    public class IncludesTests
+    {
+        [Fact]
+        public void ListDoesInclude()
+        {
+            LList list = new LList();
+            list.Insert(5);
+            Assert.True(list.Includes(5));
+        }
+
+        [Fact]
+        public void ListDoesNotIncludes()
+        {
+            LList list = new LList();
+            list.Insert(5);
+            Assert.False(list.Includes(2));
+        }
     }
 }
