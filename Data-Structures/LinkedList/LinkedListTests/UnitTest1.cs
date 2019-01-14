@@ -16,35 +16,49 @@ namespace LinkedListTests
         }
 
         [Fact]
-        public void TestForNotNull()
+        public void TestForEmptyList()
         {
             LList list = new LList();
-            Assert.NotNull(list.Head);
+            Assert.Null(list.Head);
         }
 
         [Fact]
-        public void TestWithoutValue()
+        public void TestForDoesNotInclude()
         {
             LList list = new LList();
-            Assert.Equal(0, list.Head.Value);
+            Assert.False(list.Includes(5));
         }
-
-        [Fact]
-        public void TestWithValue()
-        {
-            LList list = new LList(123);
-            Assert.Equal(123, list.Head.Value);
-        }
+        
     }
 
     public class InsertTests
     {
         [Fact]
-        public void TestInsertion()
+        public void TestInsertionType()
         {
             LList list = new LList();
             list.Insert(2);
-            int[] expected = { 2, 0 };
+            Type expected = typeof(Node);
+            Assert.IsType(expected, list.Head);
+        }
+
+        [Fact]
+        public void TestInsertionValues()
+        {
+            LList list = new LList();
+            list.Insert(2);
+            int[] expected = { 2 };
+            int[] actual = { list.Head.Value };
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void TestMultipleInsertionValues()
+        {
+            LList list = new LList();
+            list.Insert(2);
+            list.Insert(3);
+            int[] expected = { 3, 2 };
             int[] actual = { list.Head.Value, list.Head.Next.Value };
             Assert.Equal(expected, actual);
         }
@@ -57,6 +71,15 @@ namespace LinkedListTests
         {
             LList list = new LList();
             list.Insert(5);
+            Assert.True(list.Includes(5));
+        }
+
+        [Fact]
+        public void MultiListDoesInclude()
+        {
+            LList list = new LList();
+            list.Insert(5);
+            list.Insert(7);
             Assert.True(list.Includes(5));
         }
 
