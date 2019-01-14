@@ -2,5 +2,6 @@
 
 ## Table of Contents
 
-1. [Challenge: Array Shift](Challenges/ArrayShift)
-2. [Challenge: Binary Search](Challenges/BinarySearch)
+* [Challenge: Array Shift](Challenges/ArrayShift)
+* [Challenge: Binary Search](Challenges/BinarySearch)
+* [Data Structure: Linked List](Data-Structures/LinkedList)
