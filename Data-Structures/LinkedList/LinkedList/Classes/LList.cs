@@ -15,12 +15,6 @@ namespace LinkedList.Classes
             Head = null;
         }
 
-        //public LList(int value)
-        //{
-        //    Node newNode = new Node(value);
-        //    Head = newNode;
-        //}
-
         public void Insert(int value)
         {
             Node newNode = new Node(value);
@@ -28,6 +22,11 @@ namespace LinkedList.Classes
             Head = newNode;
         }
 
+        /// <summary>
+        /// Checks if linked list includes a value
+        /// </summary>
+        /// <param name="value">value to find</param>
+        /// <returns>boolean</returns>
         public bool Includes(int value)
         {
             if (Head != null)
@@ -49,6 +48,9 @@ namespace LinkedList.Classes
             return false;
         }
 
+        /// <summary>
+        /// Displays the values of the linked list
+        /// </summary>
         public void Print()
         {
             if(Head != null)
