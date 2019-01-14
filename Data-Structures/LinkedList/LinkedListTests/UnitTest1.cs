@@ -21,22 +21,24 @@ namespace LinkedListTests
             LList list = new LList();
             Assert.NotNull(list.Head);
         }
-    }
 
-    public class InsertTests
-    {
         [Fact]
         public void TestWithoutValue()
         {
             LList list = new LList();
-            Assert.True(list.Includes(0));
+            Assert.Equal(0, list.Head.Value);
         }
 
         [Fact]
         public void TestWithValue()
         {
             LList list = new LList(123);
-            Assert.True(list.Includes(123));
+            Assert.Equal(123, list.Head.Value);
         }
+    }
+
+    public class InsertTests
+    {
+        
     }
 }
