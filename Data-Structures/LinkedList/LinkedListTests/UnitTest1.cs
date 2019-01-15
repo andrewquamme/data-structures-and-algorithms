@@ -108,6 +108,19 @@ namespace LinkedListTests
         }
 
         [Fact]
+        public void TestMultiAppend()
+        {
+            LList list = new LList();
+            list.Insert(2);
+            list.Insert(3);
+            list.Append(1);
+            list.Append(5);
+            int[] expected = { 3, 2, 1, 5 };
+            int[] actual = { list.Head.Value, list.Head.Next.Value, list.Head.Next.Next.Value, list.Head.Next.Next.Next.Value };
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
         public void TestAppendToNull()
         {
             LList list = new LList();
@@ -118,8 +131,18 @@ namespace LinkedListTests
         }
     }
 
-    public class InsertBeforeTests
-    {
-
-    }
+    //public class InsertBeforeTests
+    //{
+    //    [Fact]
+    //    public void TestInsertBefore()
+    //    {
+    //        LList list = new LList();
+    //        list.Append(1);
+    //        list.Append(2);
+    //        list.Append(3);
+    //        int[] expected = { 2 };
+    //        int[] actual = { list.Head.Value };
+    //        Assert.Equal(expected, actual);
+    //    }
+    //}
 }

@@ -33,17 +33,21 @@ namespace LinkedList.Classes
         public void Append(int value)
         {
             Current = Head;
-            if(Current != null)
+            Node node = new Node(value);
+
+            if (Current != null)
             {
                 while (Current.Next != null)
                 {
                     Current = Current.Next;
                 }
+                Current.Next = node;
+            }
+            else
+            {
+                Head = node;
             }
             
-            Node node = new Node(value);
-
-            Current.Next = node;
         }
 
         /// <summary>
