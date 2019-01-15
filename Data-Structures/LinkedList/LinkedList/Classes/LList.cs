@@ -33,14 +33,14 @@ namespace LinkedList.Classes
         public void Append(int value)
         {
             Current = Head;
-            Node node = new Node(value);
-
+            
             if (Current != null)
             {
                 while (Current.Next != null)
                 {
                     Current = Current.Next;
                 }
+                Node node = new Node(value);
                 Current.Next = node;
             }
             else
@@ -59,6 +59,7 @@ namespace LinkedList.Classes
         {
             Current = Head;
 
+            //If value is head, insert new value
             if(Current.Value == value)
             {
                 Insert(newValue);
@@ -76,6 +77,7 @@ namespace LinkedList.Classes
                 }
                 Current = Current.Next;
             }
+            Console.WriteLine("Node not in list");
         }
 
         /// <summary>
