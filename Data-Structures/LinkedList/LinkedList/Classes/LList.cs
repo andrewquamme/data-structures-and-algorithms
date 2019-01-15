@@ -77,7 +77,12 @@ namespace LinkedList.Classes
                 }
                 Current = Current.Next;
             }
-            Console.WriteLine("Node not in list");
+            Console.WriteLine($"Node {value} not in list");
+        }
+
+        public void InsertAfter(int value, int newValue)
+        {
+
         }
 
         /// <summary>
