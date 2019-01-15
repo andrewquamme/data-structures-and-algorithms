@@ -36,21 +36,21 @@ namespace LinkedList.Classes
         /// </summary>
         /// <param name="value">value of new Node</param>
         /// <param name="insertionPoint">Value to insert before</param>
-        public void InsertBefore(int value, int insertionPoint)
+        public void InsertBefore(int value, int newValue)
         {
             Current = Head;
 
-            if(Current.Value == insertionPoint)
+            if(Current.Value == value)
             {
-                Insert(value);
+                Insert(newValue);
                 return;
             }
 
             while (Current.Next != null)
             {
-                if(Current.Next.Value == insertionPoint)
+                if(Current.Next.Value == value)
                 {
-                    Node node = new Node(value);
+                    Node node = new Node(newValue);
                     node.Next = Current.Next;
                     Current.Next = node;
                     return;
