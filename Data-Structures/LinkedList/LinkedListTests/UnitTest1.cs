@@ -169,6 +169,14 @@ namespace LinkedListTests
             int[] actual = { list.Head.Value, list.Head.Next.Value, list.Head.Next.Next.Value };
             Assert.Equal(expected, actual);
         }
+
+        [Fact]
+        public void TestInsertBeforeIntoEmptyList()
+        {
+            LList list = new LList();
+            list.InsertBefore(4, 5);
+            Assert.Null(list.Head);
+        }
     }
 
     public class InserAfterTests
@@ -210,6 +218,14 @@ namespace LinkedListTests
             int[] expected = { 1, 3, 2 };
             int[] actual = { list.Head.Value, list.Head.Next.Value, list.Head.Next.Next.Value };
             Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void TestInsertAfterIntoEmptyList()
+        {
+            LList list = new LList();
+            list.InsertAfter(4, 5);
+            Assert.Null(list.Head);
         }
     }
 }

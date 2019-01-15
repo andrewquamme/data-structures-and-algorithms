@@ -59,32 +59,53 @@ namespace LinkedList.Classes
         {
             Current = Head;
 
-            //If value is head, insert new value
-            if(Current.Value == value)
+            //if Head is null, prompt to use Insert
+            if(Current != null)
             {
-                Insert(newValue);
-                return;
-            }
-
-            while (Current.Next != null)
-            {
-                if(Current.Next.Value == value)
+                //If value is head, insert new value
+                if (Current.Value == value)
                 {
-                    Node node = new Node(newValue);
-                    node.Next = Current.Next;
-                    Current.Next = node;
+                    Insert(newValue);
                     return;
                 }
-                Current = Current.Next;
+
+                while (Current.Next != null)
+                {
+                    if (Current.Next.Value == value)
+                    {
+                        Node node = new Node(newValue);
+                        node.Next = Current.Next;
+                        Current.Next = node;
+                        return;
+                    }
+                    Current = Current.Next;
+                }
+                Console.WriteLine($"Node {value} not in list");
             }
-            Console.WriteLine($"Node {value} not in list");
+            else
+            {
+                Console.WriteLine("List is empty, use Insert instead");
+            }
+
+            
         }
 
         public void InsertAfter(int value, int newValue)
         {
             Current = Head;
-            while (Current.Next != null)
+            if(Current != null)
             {
+                while (Current.Next != null)
+                {
+                    if (Current.Value == value)
+                    {
+                        Node node = new Node(newValue);
+                        node.Next = Current.Next;
+                        Current.Next = node;
+                        return;
+                    }
+                    Current = Current.Next;
+                }
                 if (Current.Value == value)
                 {
                     Node node = new Node(newValue);
@@ -92,16 +113,12 @@ namespace LinkedList.Classes
                     Current.Next = node;
                     return;
                 }
-                Current = Current.Next;
+                Console.WriteLine($"Node {value} not in list");
             }
-            if (Current.Value == value)
+            else
             {
-                Node node = new Node(newValue);
-                node.Next = Current.Next;
-                Current.Next = node;
-                return;
+                Console.WriteLine("List is empty, use Insert instead");
             }
-            Console.WriteLine($"Node {value} not in list");
         }
 
         /// <summary>
