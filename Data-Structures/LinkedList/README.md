@@ -23,12 +23,15 @@ You have access to the Node class and all the properties on the Linked List clas
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-#### Insert
+#### .Includes
+Big O Time = O(n) // Big O Space = O(n)
+#### .Insert
 Big O Time = O(1) // Big O Space = O(n)
-#### Append
-
-#### InsertBefore
-
-#### InsertAfter
+#### .Append
+Big O Time = O(1) // Big O Space = O(n)
+#### .InsertBefore
+Big O Time = O(1) // Big O Space = O(n)
+#### .InsertAfter
+Big O Time = O(1) // Big O Space = O(n)
 
 
