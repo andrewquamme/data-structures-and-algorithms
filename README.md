@@ -1,6 +1,6 @@
 # Data Structures and Algorithms
 
-## Table of Contents
+### Table of Contents
 
 * [Challenge: Array Shift](Challenges/ArrayShift)
 * [Challenge: Binary Search](Challenges/BinarySearch)

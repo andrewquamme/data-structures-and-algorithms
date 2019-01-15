@@ -1,5 +1,5 @@
 # Data Structures
 
-## Table of Contents
+### Table of Contents
 
 * [Data Structure: Linked List](LinkedList)
