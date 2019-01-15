@@ -82,7 +82,14 @@ namespace LinkedList.Classes
 
         public void InsertAfter(int value, int newValue)
         {
+            Current = Head;
+            //If value is head, insert new
 
+            //Find value
+
+            //Current.Next to new node
+
+            //New node.next to current.next
         }
 
         /// <summary>
