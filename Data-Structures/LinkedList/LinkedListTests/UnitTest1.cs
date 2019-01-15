@@ -91,4 +91,14 @@ namespace LinkedListTests
             Assert.False(list.Includes(2));
         }
     }
+
+    public class AppendTests
+    {
+
+    }
+
+    public class InsertBeforeTests
+    {
+
+    }
 }

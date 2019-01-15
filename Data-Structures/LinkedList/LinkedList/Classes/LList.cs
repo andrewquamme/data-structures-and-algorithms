@@ -26,16 +26,27 @@ namespace LinkedList.Classes
             Head = newNode;
         }
 
+        /// <summary>
+        /// Append Node at end of linked list
+        /// </summary>
+        /// <param name="value">value of new Node</param>
         public void Append(int value)
         {
+            while (Current.Next != null)
+            {
+                Current = Current.Next;
+            }
 
+            Node node = new Node(value);
+
+            Current.Next = node;
         }
 
         /// <summary>
-        /// Insert Node Before a Value
+        /// Insert new Node before value
         /// </summary>
-        /// <param name="value">value of new Node</param>
-        /// <param name="insertionPoint">Value to insert before</param>
+        /// <param name="value">value to insert before</param>
+        /// <param name="newValue">new Node value</param>
         public void InsertBefore(int value, int newValue)
         {
             Current = Head;
