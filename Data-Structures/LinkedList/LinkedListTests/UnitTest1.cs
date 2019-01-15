@@ -131,18 +131,46 @@ namespace LinkedListTests
         }
     }
 
-    //public class InsertBeforeTests
-    //{
-    //    [Fact]
-    //    public void TestInsertBefore()
-    //    {
-    //        LList list = new LList();
-    //        list.Append(1);
-    //        list.Append(2);
-    //        list.Append(3);
-    //        int[] expected = { 2 };
-    //        int[] actual = { list.Head.Value };
-    //        Assert.Equal(expected, actual);
-    //    }
-    //}
+    public class InsertBeforeTests
+    {
+        [Fact]
+        public void TestInsertBefore()
+        {
+            LList list = new LList();
+            list.Append(1);
+            list.Append(3);
+            list.Append(2);
+            list.InsertBefore(3, 5);
+            int[] expected = { 1, 5, 3, 2 };
+            int[] actual = { list.Head.Value, list.Head.Next.Value, list.Head.Next.Next.Value, list.Head.Next.Next.Next.Value };
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void TestMultiInsertBefore()
+        {
+            LList list = new LList();
+            list.Append(1);
+            list.Append(3);
+            list.Append(2);
+            list.InsertBefore(3, 5);
+            list.InsertBefore(2, 6);
+            int[] expected = { 1, 5, 3, 6, 2 };
+            int[] actual = { list.Head.Value, list.Head.Next.Value, list.Head.Next.Next.Value, list.Head.Next.Next.Next.Value, list.Head.Next.Next.Next.Next.Value };
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void TestValueNotFound()
+        {
+            LList list = new LList();
+            list.Append(1);
+            list.Append(3);
+            list.Append(2);
+            list.InsertBefore(4, 5);
+            int[] expected = { 1, 3, 2 };
+            int[] actual = { list.Head.Value, list.Head.Next.Value, list.Head.Next.Next.Value };
+            Assert.Equal(expected, actual);
+        }
+    }
 }

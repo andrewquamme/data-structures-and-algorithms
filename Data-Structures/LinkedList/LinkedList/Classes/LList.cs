@@ -45,7 +45,7 @@ namespace LinkedList.Classes
             }
             else
             {
-                Head = node;
+                Insert(value);
             }
             
         }
@@ -111,6 +111,7 @@ namespace LinkedList.Classes
         {
             if(Head != null)
             {
+                Console.Write("Head => ");
                 Current = Head;
                 while (Current.Next != null)
                 {
