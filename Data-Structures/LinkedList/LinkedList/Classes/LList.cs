@@ -15,11 +15,115 @@ namespace LinkedList.Classes
             Head = null;
         }
 
+        /// <summary>
+        /// Insert Node at Head
+        /// </summary>
+        /// <param name="value">value of new Node</param>
         public void Insert(int value)
         {
             Node newNode = new Node(value);
             newNode.Next = Head;
             Head = newNode;
+        }
+
+        /// <summary>
+        /// Append Node at end of linked list
+        /// </summary>
+        /// <param name="value">value of new Node</param>
+        public void Append(int value)
+        {
+            Current = Head;
+            
+            if (Current != null)
+            {
+                while (Current.Next != null)
+                {
+                    Current = Current.Next;
+                }
+                Node node = new Node(value);
+                Current.Next = node;
+            }
+            else
+            {
+                Insert(value);
+            }
+            
+        }
+
+        /// <summary>
+        /// Insert new Node before value
+        /// </summary>
+        /// <param name="value">value to insert before</param>
+        /// <param name="newValue">new Node value</param>
+        public void InsertBefore(int value, int newValue)
+        {
+            Current = Head;
+
+            //if Head is null, prompt to use Insert
+            if(Current != null)
+            {
+                //If value is head, insert new value
+                if (Current.Value == value)
+                {
+                    Insert(newValue);
+                    return;
+                }
+
+                while (Current.Next != null)
+                {
+                    if (Current.Next.Value == value)
+                    {
+                        Node node = new Node(newValue);
+                        node.Next = Current.Next;
+                        Current.Next = node;
+                        return;
+                    }
+                    Current = Current.Next;
+                }
+                Console.WriteLine($"Node {value} not in list");
+            }
+            else
+            {
+                Console.WriteLine("List is empty, use Insert instead");
+            }
+
+            
+        }
+
+        /// <summary>
+        /// Insert new Node after value
+        /// </summary>
+        /// <param name="value">value to insert after</param>
+        /// <param name="newValue">new Node value</param>
+        public void InsertAfter(int value, int newValue)
+        {
+            Current = Head;
+            if(Current != null)
+            {
+                while (Current.Next != null)
+                {
+                    if (Current.Value == value)
+                    {
+                        Node node = new Node(newValue);
+                        node.Next = Current.Next;
+                        Current.Next = node;
+                        return;
+                    }
+                    Current = Current.Next;
+                }
+                if (Current.Value == value)
+                {
+                    Node node = new Node(newValue);
+                    node.Next = Current.Next;
+                    Current.Next = node;
+                    return;
+                }
+                Console.WriteLine($"Node {value} not in list");
+            }
+            else
+            {
+                Console.WriteLine("List is empty, use Insert instead");
+            }
         }
 
         /// <summary>
@@ -55,19 +159,21 @@ namespace LinkedList.Classes
         {
             if(Head != null)
             {
+                Console.Write("Head => ");
                 Current = Head;
                 while (Current.Next != null)
                 {
-                    Console.WriteLine(Current.Value);
+                    Console.Write($"{Current.Value} => ");
                     Current = Current.Next;
                 }
-                Console.WriteLine(Current.Value);
+                Console.Write($"{Current.Value} => Null");
             }
             else
             {
-                Console.WriteLine("The linked list is empty");
+                Console.Write("The linked list is empty");
             }
             
         }
+        
     }
 }

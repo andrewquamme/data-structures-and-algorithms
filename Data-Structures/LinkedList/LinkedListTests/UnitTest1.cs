@@ -91,4 +91,141 @@ namespace LinkedListTests
             Assert.False(list.Includes(2));
         }
     }
+
+    public class AppendTests
+    {
+        [Fact]
+        public void TestAppend()
+        {
+            LList list = new LList();
+            list.Insert(2);
+            list.Insert(3);
+            list.Insert(1);
+            list.Append(5);
+            int[] expected = { 1, 3, 2, 5 };
+            int[] actual = { list.Head.Value, list.Head.Next.Value, list.Head.Next.Next.Value, list.Head.Next.Next.Next.Value };
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void TestMultiAppend()
+        {
+            LList list = new LList();
+            list.Insert(2);
+            list.Insert(3);
+            list.Append(1);
+            list.Append(5);
+            int[] expected = { 3, 2, 1, 5 };
+            int[] actual = { list.Head.Value, list.Head.Next.Value, list.Head.Next.Next.Value, list.Head.Next.Next.Next.Value };
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void TestAppendToNull()
+        {
+            LList list = new LList();
+            list.Append(2);
+            int[] expected = { 2 };
+            int[] actual = { list.Head.Value };
+            Assert.Equal(expected, actual);
+        }
+    }
+
+    public class InsertBeforeTests
+    {
+        [Fact]
+        public void TestInsertBefore()
+        {
+            LList list = new LList();
+            list.Append(1);
+            list.Append(3);
+            list.Append(2);
+            list.InsertBefore(3, 5);
+            int[] expected = { 1, 5, 3, 2 };
+            int[] actual = { list.Head.Value, list.Head.Next.Value, list.Head.Next.Next.Value, list.Head.Next.Next.Next.Value };
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void TestInsertBeforeAtHead()
+        {
+            LList list = new LList();
+            list.Insert(1);
+            list.InsertBefore(1, 5);
+            int[] expected = { 5, 1 };
+            int[] actual = { list.Head.Value, list.Head.Next.Value, };
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void TestNodeNotFound()
+        {
+            LList list = new LList();
+            list.Append(1);
+            list.Append(3);
+            list.Append(2);
+            list.InsertBefore(4, 5);
+            int[] expected = { 1, 3, 2 };
+            int[] actual = { list.Head.Value, list.Head.Next.Value, list.Head.Next.Next.Value };
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void TestInsertBeforeIntoEmptyList()
+        {
+            LList list = new LList();
+            list.InsertBefore(4, 5);
+            Assert.Null(list.Head);
+        }
+    }
+
+    public class InserAfterTests
+    {
+        [Fact]
+        public void TestInsertAfter()
+        {
+            LList list = new LList();
+            list.Append(1);
+            list.Append(3);
+            list.Append(2);
+            list.InsertAfter(3, 5);
+            int[] expected = { 1, 3, 5, 2 };
+            int[] actual = { list.Head.Value, list.Head.Next.Value, list.Head.Next.Next.Value, list.Head.Next.Next.Next.Value };
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void TestInsertAfterAtEndOfList()
+        {
+            LList list = new LList();
+            list.Append(1);
+            list.Append(3);
+            list.Append(2);
+            list.InsertAfter(2, 5);
+            int[] expected = { 1, 3, 2, 5 };
+            int[] actual = { list.Head.Value, list.Head.Next.Value, list.Head.Next.Next.Value, list.Head.Next.Next.Next.Value };
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void TestNodeNotFound()
+        {
+            LList list = new LList();
+            list.Append(1);
+            list.Append(3);
+            list.Append(2);
+            list.InsertAfter(4, 5);
+            int[] expected = { 1, 3, 2 };
+            int[] actual = { list.Head.Value, list.Head.Next.Value, list.Head.Next.Next.Value };
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void TestInsertAfterIntoEmptyList()
+        {
+            LList list = new LList();
+            list.InsertAfter(4, 5);
+            Assert.Null(list.Head);
+        }
+    }
 }
