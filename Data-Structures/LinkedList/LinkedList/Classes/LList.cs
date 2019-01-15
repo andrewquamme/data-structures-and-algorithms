@@ -83,13 +83,18 @@ namespace LinkedList.Classes
         public void InsertAfter(int value, int newValue)
         {
             Current = Head;
-            //If value is head, insert new
-
-            //Find value
-
-            //Current.Next to new node
-
-            //New node.next to current.next
+            while (Current.Next != null)
+            {
+                if (Current.Value == value)
+                {
+                    Node node = new Node(newValue);
+                    node.Next = Current.Next;
+                    Current.Next = node;
+                    return;
+                }
+                Current = Current.Next;
+            }
+            Console.WriteLine($"Node {value} not in list");
         }
 
         /// <summary>

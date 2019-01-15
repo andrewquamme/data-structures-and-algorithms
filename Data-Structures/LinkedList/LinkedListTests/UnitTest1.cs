@@ -173,4 +173,20 @@ namespace LinkedListTests
             Assert.Equal(expected, actual);
         }
     }
+
+    public class InserAfterTests
+    {
+        [Fact]
+        public void TestInsertAfter()
+        {
+            LList list = new LList();
+            list.Append(1);
+            list.Append(3);
+            list.Append(2);
+            list.InsertAfter(3, 5);
+            int[] expected = { 1, 3, 5, 2 };
+            int[] actual = { list.Head.Value, list.Head.Next.Value, list.Head.Next.Next.Value, list.Head.Next.Next.Next.Value };
+            Assert.Equal(expected, actual);
+        }
+    }
 }
