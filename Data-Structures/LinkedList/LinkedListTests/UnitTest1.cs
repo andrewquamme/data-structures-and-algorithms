@@ -158,7 +158,7 @@ namespace LinkedListTests
         }
 
         [Fact]
-        public void TestValueNotFound()
+        public void TestNodeNotFound()
         {
             LList list = new LList();
             list.Append(1);
@@ -196,6 +196,19 @@ namespace LinkedListTests
             list.InsertAfter(2, 5);
             int[] expected = { 1, 3, 2, 5 };
             int[] actual = { list.Head.Value, list.Head.Next.Value, list.Head.Next.Next.Value, list.Head.Next.Next.Next.Value };
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void TestNodeNotFound()
+        {
+            LList list = new LList();
+            list.Append(1);
+            list.Append(3);
+            list.Append(2);
+            list.InsertAfter(4, 5);
+            int[] expected = { 1, 3, 2 };
+            int[] actual = { list.Head.Value, list.Head.Next.Value, list.Head.Next.Next.Value };
             Assert.Equal(expected, actual);
         }
     }
