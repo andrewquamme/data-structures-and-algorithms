@@ -90,6 +90,11 @@ namespace LinkedList.Classes
             
         }
 
+        /// <summary>
+        /// Insert new Node after value
+        /// </summary>
+        /// <param name="value">value to insert after</param>
+        /// <param name="newValue">new Node value</param>
         public void InsertAfter(int value, int newValue)
         {
             Current = Head;
@@ -169,7 +174,6 @@ namespace LinkedList.Classes
             }
             
         }
-
         
     }
 }
