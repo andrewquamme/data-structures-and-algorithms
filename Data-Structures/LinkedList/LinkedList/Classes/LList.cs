@@ -94,6 +94,13 @@ namespace LinkedList.Classes
                 }
                 Current = Current.Next;
             }
+            if (Current.Value == value)
+            {
+                Node node = new Node(newValue);
+                node.Next = Current.Next;
+                Current.Next = node;
+                return;
+            }
             Console.WriteLine($"Node {value} not in list");
         }
 

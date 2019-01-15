@@ -147,16 +147,13 @@ namespace LinkedListTests
         }
 
         [Fact]
-        public void TestMultiInsertBefore()
+        public void TestInsertBeforeAtHead()
         {
             LList list = new LList();
-            list.Append(1);
-            list.Append(3);
-            list.Append(2);
-            list.InsertBefore(3, 5);
-            list.InsertBefore(2, 6);
-            int[] expected = { 1, 5, 3, 6, 2 };
-            int[] actual = { list.Head.Value, list.Head.Next.Value, list.Head.Next.Next.Value, list.Head.Next.Next.Next.Value, list.Head.Next.Next.Next.Next.Value };
+            list.Insert(1);
+            list.InsertBefore(1, 5);
+            int[] expected = { 5, 1 };
+            int[] actual = { list.Head.Value, list.Head.Next.Value, };
             Assert.Equal(expected, actual);
         }
 
