@@ -15,7 +15,7 @@ namespace BinarySearch
         /// </summary>
         /// <param name="array">array of numbers</param>
         /// <param name="num">number to find</param>
-        /// <returns></returns>
+        /// <returns>index of number</returns>
         public static int BinarySearch(int[] array, int num)
         {
             int min = 0;
