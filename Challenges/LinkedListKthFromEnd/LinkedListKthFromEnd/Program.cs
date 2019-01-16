@@ -20,7 +20,7 @@ namespace LinkedListKthFromEnd
             Console.WriteLine(KthFromEnd(list, 4));
         }
 
-        static int KthFromEnd(LList list, int k)
+        public static int KthFromEnd(LList list, int k)
         {
             int counter = 0;
             list.Current = list.Head;
