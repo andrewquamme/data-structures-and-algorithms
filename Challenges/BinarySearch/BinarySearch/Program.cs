@@ -10,6 +10,12 @@ namespace BinarySearch
             Console.WriteLine(BinarySearch(array, 3));
         }
 
+        /// <summary>
+        /// Performs binary search on an array for a given number
+        /// </summary>
+        /// <param name="array">array of numbers</param>
+        /// <param name="num">number to find</param>
+        /// <returns></returns>
         public static int BinarySearch(int[] array, int num)
         {
             int min = 0;
