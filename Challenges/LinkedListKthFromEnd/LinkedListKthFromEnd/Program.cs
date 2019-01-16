@@ -20,6 +20,14 @@ namespace LinkedListKthFromEnd
             Console.WriteLine(KthFromEnd(list, 4));
         }
 
+        /// <summary>
+        /// Finds the k-th from the end value of a linked list
+        /// Returns -1 if list is empty
+        /// Returns -1 if k is larger than linked list length
+        /// </summary>
+        /// <param name="list">linked list</param>
+        /// <param name="k">position from end of linked list</param>
+        /// <returns>value at k from end</returns>
         public static int KthFromEnd(LList list, int k)
         {
             int counter = 0;
