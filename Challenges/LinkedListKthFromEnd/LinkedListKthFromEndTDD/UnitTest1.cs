@@ -36,7 +36,7 @@ namespace LinkedListKthFromEndTDD
         public void TestNullException()
         {
             LList list = new LList();
-            Assert.Equal(-1, Program.KthFromEnd(list, 3));
+            Assert.Throws<Exception>(() => Program.KthFromEnd(list, 3));
         }
 
         [Fact]
@@ -47,7 +47,7 @@ namespace LinkedListKthFromEndTDD
             list.Append(3);
             list.Append(8);
             list.Append(2);
-            Assert.Equal(-1, Program.KthFromEnd(list, 6));
+            Assert.Throws<Exception>(() => Program.KthFromEnd(list, 6));
         }
     }
 }

@@ -22,8 +22,8 @@ namespace LinkedListKthFromEnd
 
         /// <summary>
         /// Finds the k-th from the end value of a linked list
-        /// Returns -1 if list is empty
-        /// Returns -1 if k is larger than linked list length
+        /// Throws exception if list is null
+        /// Throws exception if k is greater than list length
         /// </summary>
         /// <param name="list">linked list</param>
         /// <param name="k">position from end of linked list</param>
@@ -32,26 +32,33 @@ namespace LinkedListKthFromEnd
         {
             int counter = 0;
             list.Current = list.Head;
-
-            // Return -1 if linked list is empty
-            if (list.Current == null) return -1;
-
-            // Find length of linked list
-            while(list.Current != null)
+            try
             {
-                counter++;
-                list.Current = list.Current.Next;
+                // Find length of linked list
+                while (list.Current != null)
+                {
+                    counter++;
+                    list.Current = list.Current.Next;
+                }
+
+                // Return -1 if k is longer than linked list
+                if (k >= counter) throw new Exception();
+
+                list.Current = list.Head;
+                for (int i = 0; i < counter - k - 1; i++)
+                {
+                    list.Current = list.Current.Next;
+                }
+                return list.Current.Value;
             }
-
-            // Return -1 if k is longer than linked list
-            if (k >= counter) return -1;
-
-            list.Current = list.Head;
-            for (int i = 0; i < counter - k - 1; i++)
+            catch (Exception)
             {
-                list.Current = list.Current.Next;
+                Console.WriteLine("k is out of bounds of the linked list");
+                throw;
             }
-            return list.Current.Value;
+            
+
+            
         }
     }
 }
