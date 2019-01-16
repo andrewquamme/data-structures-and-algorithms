@@ -5,10 +5,10 @@ using LinkedList.Classes;
 
 namespace LinkedListKthFromEndTDD
 {
-    public class TestsWhiteboardSolution
+    public class TestValidInputs
     {
         [Fact]
-        public void Test1()
+        public void TestWhiteboardSolution()
         {
             LList list = new LList();
             list.Append(1);
@@ -16,6 +16,17 @@ namespace LinkedListKthFromEndTDD
             list.Append(3);
             list.Append(4);
             Assert.Equal(1 , Program.KthFromEnd(list, 3));
+        }
+
+        [Fact]
+        public void TestChallengeExample()
+        {
+            LList list = new LList();
+            list.Append(1);
+            list.Append(3);
+            list.Append(8);
+            list.Append(2);
+            Assert.Equal(2, Program.KthFromEnd(list, 0));
         }
     }
 }
