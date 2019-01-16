@@ -10,6 +10,12 @@ namespace ArrayShift
             ArrayShift(array, 5);
         }
 
+        /// <summary>
+        /// Insert number at middle index of array and shift array
+        /// </summary>
+        /// <param name="array">array of numbers</param>
+        /// <param name="num">number to insert</param>
+        /// <returns>shifted array</returns>
         public static int[] ArrayShift(int[] array, int num)
         {
             int arrayLength = array.Length;
