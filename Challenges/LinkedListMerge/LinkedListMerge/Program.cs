@@ -4,7 +4,7 @@ using LinkedList.Classes;
 
 namespace LinkedListMerge
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -32,7 +32,7 @@ namespace LinkedListMerge
         /// <param name="list1">Linked List 1</param>
         /// <param name="list2">Linked List 2</param>
         /// <returns>Merged List</returns>
-        static LList MergeLists(LList list1, LList list2)
+        public static LList MergeLists(LList list1, LList list2)
         {
             list1.Current = list1.Head;
             list2.Current = list2.Head;
