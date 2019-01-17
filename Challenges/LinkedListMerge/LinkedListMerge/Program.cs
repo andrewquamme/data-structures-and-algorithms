@@ -39,7 +39,7 @@ namespace LinkedListMerge
             list1.Current = list1.Head;
             list2.Current = list2.Head;
 
-            while (list1.Current != null)
+            while (list2.Current != null)
             {
                 Node tempNode = list1.Current.Next;
                 list1.Current.Next = list2.Current;
