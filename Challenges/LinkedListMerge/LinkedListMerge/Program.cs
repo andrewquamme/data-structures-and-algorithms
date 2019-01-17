@@ -14,12 +14,14 @@ namespace LinkedListMerge
             list1.Append(2);
             list1.Print();
             Console.WriteLine();
+
             LList list2 = new LList();
             list2.Append(5);
             list2.Append(9);
             list2.Append(2);
             list2.Print();
             Console.WriteLine();
+
             LList mergedList = MergeLists(list1, list2);
             mergedList.Print();
             Console.WriteLine();
@@ -37,7 +39,7 @@ namespace LinkedListMerge
             list1.Current = list1.Head;
             list2.Current = list2.Head;
 
-            while (list1.Current != null || list2.Current != null)
+            while (list1.Current != null)
             {
                 Node tempNode = list1.Current.Next;
                 list1.Current.Next = list2.Current;
