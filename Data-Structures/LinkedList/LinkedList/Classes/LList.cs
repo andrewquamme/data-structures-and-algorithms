@@ -155,23 +155,29 @@ namespace LinkedList.Classes
         /// <summary>
         /// Displays the values of the linked list
         /// </summary>
-        public void Print()
+        /// <returns>String of complete linked list</returns>
+        public string Print()
         {
-            if(Head != null)
+            string linkedList = "Head => ";
+
+            if (Head != null)
             {
-                Console.Write("Head => ");
                 Current = Head;
                 while (Current.Next != null)
                 {
-                    Console.Write($"{Current.Value} => ");
+                    linkedList += $"{Current.Value} => ";
                     Current = Current.Next;
                 }
-                Console.Write($"{Current.Value} => Null");
+                linkedList += $"{Current.Value} => Null";
+
             }
             else
             {
-                Console.Write("The linked list is empty");
+                linkedList += "Null";
             }
+
+            Console.WriteLine(linkedList);
+            return linkedList;
             
         }
         
