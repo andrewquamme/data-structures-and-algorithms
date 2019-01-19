@@ -47,5 +47,12 @@ namespace StacksAndQueuesTDD
             Stack stack = new Stack(node);
             Assert.Equal(1, stack.Peek().Value);
         }
+
+        [Fact]
+        public void TestPeekAtEmptyStack()
+        {
+            Stack stack = new Stack();
+            Assert.Null(stack.Peek());
+        }
     }
 }
