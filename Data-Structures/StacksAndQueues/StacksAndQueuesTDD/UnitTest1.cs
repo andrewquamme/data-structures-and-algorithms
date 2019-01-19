@@ -16,8 +16,8 @@ namespace StacksAndQueuesTDD
         [Fact]
         public void TestStackCreationWithNode()
         {
-            Node node = new Node(1);
-            Stack stack = new Stack(node);
+            Stack stack = new Stack();
+            stack.Push(1);
             Assert.Equal(1, stack.Top.Value);
         }
 
@@ -32,8 +32,8 @@ namespace StacksAndQueuesTDD
         [Fact]
         public void TestPushToStackWithNode()
         {
-            Node node = new Node(1);
-            Stack stack = new Stack(node);
+            Stack stack = new Stack();
+            stack.Push(1);
             stack.Push(2);
             int[] expected = { 2, 1 };
             int[] actual = { stack.Top.Value, stack.Top.Next.Value };
@@ -43,24 +43,24 @@ namespace StacksAndQueuesTDD
         [Fact]
         public void TestPeekAtStack()
         {
-            Node node = new Node(1);
-            Stack stack = new Stack(node);
-            Assert.Equal(1, stack.Peek().Value);
-        }
-
-        [Fact]
-        public void TestPeekAtEmptyStack()
-        {
             Stack stack = new Stack();
-            Assert.Null(stack.Peek());
+            stack.Push(1);
+            Assert.Equal(1, stack.Peek());
         }
 
-        [Fact]
-        public void TestPopFromStack()
-        {
-            Node node = new Node(5);
-            Stack stack = new Stack(node);
+        //[Fact]
+        //public void TestPeekAtEmptyStack()
+        //{
+        //    Stack stack = new Stack();
+        //    Assert.Null(stack.Peek());
+        //}
 
-        }
+        //[Fact]
+        //public void TestPopFromStack()
+        //{
+        //    Node node = new Node(5);
+        //    Stack stack = new Stack(node);
+
+        //}
     }
 }
