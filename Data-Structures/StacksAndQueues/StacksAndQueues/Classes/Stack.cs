@@ -19,15 +19,6 @@ namespace StacksAndQueues.Classes
         }
 
         /// <summary>
-        /// Set top to node upon instantiation
-        /// </summary>
-        /// <param name="node">first node in stack</param>
-        public Stack(Node node)
-        {
-            Top = node;
-        }
-
-        /// <summary>
         /// Create a new Node and push to 
         /// top of the stack
         /// </summary>
@@ -41,10 +32,10 @@ namespace StacksAndQueues.Classes
 
         /// <summary>
         /// Pop top node from the stack and 
-        /// return to the user
+        /// return value to the user
         /// </summary>
-        /// <returns>Top Node</returns>
-        public Node Pop()
+        /// <returns>Top Node Value</returns>
+        public int Pop()
         {
             // create a temp
             Node temp = Top;
@@ -53,7 +44,7 @@ namespace StacksAndQueues.Classes
             // clear the reference of next on the temp
             temp.Next = null;
             // return the node
-            return temp;
+            return temp.Value;
         }
 
         /// <summary>
@@ -61,10 +52,10 @@ namespace StacksAndQueues.Classes
         /// the stack
         /// </summary>
         /// <returns>Top Node</returns>
-        public Node Peek()
+        public int Peek()
         {
             // Show us the top node of a stack
-            return Top;
+            return Top.Value;
         }
     }
 }

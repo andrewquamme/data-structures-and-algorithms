@@ -54,5 +54,13 @@ namespace StacksAndQueuesTDD
             Stack stack = new Stack();
             Assert.Null(stack.Peek());
         }
+
+        [Fact]
+        public void TestPopFromStack()
+        {
+            Node node = new Node(5);
+            Stack stack = new Stack(node);
+
+        }
     }
 }
