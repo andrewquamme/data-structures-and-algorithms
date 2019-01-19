@@ -54,8 +54,14 @@ namespace StacksAndQueues.Classes
         /// <returns>Top Node</returns>
         public int Peek()
         {
-            // Show us the top node of a stack
-            return Top.Value;
+            if (Top != null)
+            {
+                return Top.Value;
+            }
+            else
+            {
+                Console.WriteLine("Stack is empty");
+            }
         }
     }
 }
