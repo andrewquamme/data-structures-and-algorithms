@@ -7,10 +7,18 @@ namespace StacksAndQueuesTDD
     public class StackTests
     {
         [Fact]
-        public void TestForEmptyStack()
+        public void TestEmptyStackCreation()
         {
             Stack stack = new Stack();
             Assert.Null(stack.Top);
+        }
+
+        [Fact]
+        public void TestStackCreationWithNode()
+        {
+            Node node = new Node(1);
+            Stack stack = new Stack(node);
+            Assert.Equal(1, stack.Top.Value);
         }
 
         [Fact]
@@ -30,6 +38,14 @@ namespace StacksAndQueuesTDD
             int[] expected = { 2, 1 };
             int[] actual = { stack.Top.Value, stack.Top.Next.Value };
             Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void TestPeekAtStack()
+        {
+            Node node = new Node(1);
+            Stack stack = new Stack(node);
+            Assert.Equal(1, stack.Peek().Value);
         }
     }
 }
