@@ -54,7 +54,7 @@ namespace StacksAndQueues.Classes
         /// <returns>Top Node</returns>
         public int Peek()
         {
-            return Top;
+            return Top.Value;
         }
     }
 }
