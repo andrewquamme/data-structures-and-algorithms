@@ -44,4 +44,22 @@ namespace StacksAndQueuesTDD
             Assert.Equal(5, stack.Pop());
         }
     }
+
+    public class QueueTests
+    {
+        [Fact]
+        public void TestEmptyQueueCreation()
+        {
+            Queue queue = new Queue();
+            Assert.Null(queue.Front);
+        }
+
+        [Fact]
+        public void TestEnqueue()
+        {
+            Queue queue = new Queue();
+            queue.Enqueue(5);
+            Assert.Equal(5, queue.Front.Value);
+        }
+    }
 }
