@@ -29,12 +29,12 @@ namespace StacksAndQueuesTDD
             Assert.Equal(1, stack.Peek());
         }
 
-        [Fact]
-        public void TestPeekAtEmptyStack()
-        {
-            Stack stack = new Stack();
-            Assert.Null(stack.Peek());
-        }
+        //[Fact]
+        //public void TestPeekAtEmptyStack()
+        //{
+        //    Stack stack = new Stack();
+        //    Assert.Throws<NullReferenceException>(()=>stack.Peek());
+        //}
 
         [Fact]
         public void TestPopFromStack()

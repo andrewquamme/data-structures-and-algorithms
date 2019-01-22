@@ -6,7 +6,6 @@ namespace StacksAndQueues.Classes
 {
     public class Stack
     {
-        // Top Reference so we know where the top is
         public Node Top { get; set; }
 
         /// <summary>
@@ -51,7 +50,7 @@ namespace StacksAndQueues.Classes
         /// Peek at the top Node on
         /// the stack
         /// </summary>
-        /// <returns>Top Node</returns>
+        /// <returns>Top Node Value</returns>
         public int Peek()
         {
             return Top.Value;

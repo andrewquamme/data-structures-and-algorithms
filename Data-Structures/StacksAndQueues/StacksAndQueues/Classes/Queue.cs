@@ -15,13 +15,11 @@ namespace StacksAndQueues.Classes
             Front = null;
         }
 
-        public Queue(Node node)
-        {
-            Front = node;
-            Rear = node;
-        }
-
-
+        /// <summary>
+        /// Create a new Node and add
+        /// to the back of the queue
+        /// </summary>
+        /// <param name="value">value of new Node</param>
         public void Enqueue(int value)
         {
             Node node = new Node(value);
@@ -29,8 +27,12 @@ namespace StacksAndQueues.Classes
             Rear = node;
         }
 
-
-        public Node Dequeue()
+        /// <summary>
+        /// Dequeue front node and return
+        /// value to the user
+        /// </summary>
+        /// <returns>Front Node Value</returns>
+        public int Dequeue()
         {
             // create a temp to keep track of the original front
             Node temp = Front;
@@ -40,13 +42,16 @@ namespace StacksAndQueues.Classes
             temp.Next = null;
 
             //return the temp to the user
-            return temp;
+            return temp.Value;
         }
 
-
-        public Node Peek()
+        /// <summary>
+        /// Peek at the front node in the queue
+        /// </summary>
+        /// <returns>Front Node Value</returns>
+        public int Peek()
         {
-            return Front;
+            return Front.Value;
         }
     }
 }
