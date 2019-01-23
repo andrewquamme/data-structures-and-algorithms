@@ -41,9 +41,7 @@ namespace QueueWithStacks.Classes
                 }
             }
             
-
-            Node node = stackTwo.Pop();
-            return node;
+            return stackTwo.Pop();
         }
     }
 }
