@@ -19,3 +19,30 @@ Create a `Queue` class that has a top property. It creates an empty queue when i
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+#### BigO 
+**Stack.Push and Queue.Enqueue methods**
+
+Space O(1) / Time O(1)
+
+**Stack.Pop and Queue.Dequeue methods**
+
+Space O(1) / Time O(1)
+
+**Stack.Peek and Queue.Peek methods**
+
+Space O(1) / Time O(1)
+
+## API
+### Stack
+**Push()** Adds a new node to the top of the stack
+
+**Pop()** Removes and returns the top node from the stack
+
+**Peek()** Returns the top node on the stack
+
+### Queue
+**Enqueue** Adds a new node to the back of the queue
+
+**Dequeue** Removes and returns the front node from the queue
+
+**Peek** Returns the front node in the queue

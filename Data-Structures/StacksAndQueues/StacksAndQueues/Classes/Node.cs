@@ -14,5 +14,4 @@ namespace StacksAndQueues.Classes
             Value = value;
         }
     }
-
 }

@@ -34,7 +34,7 @@ namespace StacksAndQueues.Classes
         /// return value to the user
         /// </summary>
         /// <returns>Top Node Value</returns>
-        public int Pop()
+        public Node Pop()
         {
             // create a temp
             Node temp = Top;
@@ -43,7 +43,7 @@ namespace StacksAndQueues.Classes
             // clear the reference of next on the temp
             temp.Next = null;
             // return the node
-            return temp.Value;
+            return temp;
         }
 
         /// <summary>
@@ -51,9 +51,9 @@ namespace StacksAndQueues.Classes
         /// the stack
         /// </summary>
         /// <returns>Top Node Value</returns>
-        public int Peek()
+        public Node Peek()
         {
-            return Top.Value;
+            return Top;
         }
     }
 }
