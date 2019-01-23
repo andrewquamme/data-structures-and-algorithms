@@ -7,14 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="QueueWithStacksTDD" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="QueueWithStacksTDD" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
     <PackageReference Include="xunit" Version="2.4.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
@@ -22,6 +14,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\QueueWithStacks\QueueWithStacks.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="StacksAndQueues">
+      <HintPath>..\..\..\Data-Structures\StacksAndQueues\StacksAndQueues\bin\Debug\netcoreapp2.2\StacksAndQueues.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

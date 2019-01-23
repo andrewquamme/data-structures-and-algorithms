@@ -17,8 +17,9 @@ namespace QueueWithStacks
             queue.Enqueue(5);
             queue.Enqueue(4);
             Console.WriteLine(queue.Dequeue().Value);
+            queue.Enqueue(3);
             Console.WriteLine(queue.Dequeue().Value);
-
+            Console.WriteLine(queue.Dequeue().Value);
         }
     }
 }

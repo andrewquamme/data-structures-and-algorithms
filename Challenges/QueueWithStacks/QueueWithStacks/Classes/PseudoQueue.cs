@@ -7,8 +7,8 @@ namespace QueueWithStacks.Classes
 {
     public class PsuedoQueue
     {
-        Stack stackOne = new Stack();
-        Stack stackTwo = new Stack();
+        public Stack stackOne = new Stack();
+        public Stack stackTwo = new Stack();
 
         
         /// <summary>
@@ -17,7 +17,6 @@ namespace QueueWithStacks.Classes
         /// <param name="value">value to add to queue</param>
         public void Enqueue(int value)
         {
-            Node node = new Node(value);
             if (stackTwo.Peek() != null)
             {
                 while (stackTwo.Peek() != null)
@@ -25,7 +24,7 @@ namespace QueueWithStacks.Classes
                     stackOne.Push(stackTwo.Pop().Value);
                 }
             }
-            stackOne.Top = node;
+            stackOne.Push(value);
         }
 
         /// <summary>
@@ -42,9 +41,7 @@ namespace QueueWithStacks.Classes
                 }
             }
             
-
-            Node node = stackTwo.Pop();
-            return node;
+            return stackTwo.Pop();
         }
     }
 }

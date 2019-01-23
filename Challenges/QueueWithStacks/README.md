@@ -11,6 +11,11 @@ Create a brand new `PseudoQueue` class. Do not use an existing Queue. Instead, t
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+For this challenge, the approach was to use Enqueue() to add incoming values to stackOne. When Dequeue() is called, the contents of stackOne are popped and pushed into stackTwo. The Top of stackTwo is then returned. Subsequent Dequeue() calls result in a Pop() from stackTwo. If Enqueue() is called again before stackTwo is cleared, the contents of stackTwo are popped and pushed back into stackOne and the new value is added to the Top of stackOne.
+
+#### BigO
+Space O(1)/Time O(1)
+
 
 ## Solution
 <!-- Embedded whiteboard image -->
