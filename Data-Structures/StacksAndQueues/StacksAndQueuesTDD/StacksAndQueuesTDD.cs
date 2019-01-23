@@ -41,7 +41,7 @@ namespace StacksAndQueuesTDD
         {
             Stack stack = new Stack();
             stack.Push(5);
-            Assert.Equal(5, stack.Pop());
+            Assert.Equal(5, stack.Pop().Value);
         }
     }
 
@@ -51,7 +51,7 @@ namespace StacksAndQueuesTDD
         public void TestEmptyQueueCreation()
         {
             Queue queue = new Queue();
-            Assert.Null(queue.Front);
+            Assert.Null(queue.Front.Value);
         }
 
         [Fact]
@@ -59,7 +59,22 @@ namespace StacksAndQueuesTDD
         {
             Queue queue = new Queue();
             queue.Enqueue(5);
-            Assert.Equal(5, queue.Front.Value);
+            Assert.Equal(5, queue.Rear.Value);
+        }
+
+        [Fact]
+        public void TestPeek()
+        {
+            Queue queue = new Queue();
+            queue.Enqueue(5);
+            Assert.Equal(5, queue.Peek());
+        }
+
+        [Fact]
+        public void TestPeekAtNull()
+        {
+            Queue queue = new Queue();
+            Assert.Null(queue.Peek());
         }
     }
 }
