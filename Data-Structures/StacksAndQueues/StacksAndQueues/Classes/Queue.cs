@@ -12,9 +12,7 @@ namespace StacksAndQueues.Classes
 
         public Queue()
         {
-            Node node = new Node(null);
-            Rear = node;
-            Front = node;
+            Front = null;
         }
 
         /// <summary>
@@ -26,7 +24,7 @@ namespace StacksAndQueues.Classes
         {
             Node node = new Node(value);
             
-            if (Front.Value == null)
+            if (Front == null)
             {
                 Front = node;
                 Rear = node;
@@ -60,9 +58,9 @@ namespace StacksAndQueues.Classes
         /// Peek at the front node in the queue
         /// </summary>
         /// <returns>Front Node Value</returns>
-        public int? Peek()
+        public Node Peek()
         {
-            return Front.Value;
+            return Front;
         }
     }
 }

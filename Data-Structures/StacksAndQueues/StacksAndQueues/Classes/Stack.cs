@@ -14,8 +14,7 @@ namespace StacksAndQueues.Classes
         /// </summary>
         public Stack()
         {
-            Node node = new Node(null);
-            Top = node;
+            Top = null;
         }
 
         /// <summary>
@@ -52,9 +51,9 @@ namespace StacksAndQueues.Classes
         /// the stack
         /// </summary>
         /// <returns>Top Node Value</returns>
-        public int? Peek()
+        public Node Peek()
         {
-            return Top.Value;
+            return Top;
         }
     }
 }
