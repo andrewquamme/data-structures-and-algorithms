@@ -28,7 +28,7 @@ namespace StacksAndQueues.Classes
             Node node = new Node(value);
             node.Next = null;
             
-            if (Front == null)
+            if (Front.Value == null)
             {
                 Front = node;
                 Rear = node;

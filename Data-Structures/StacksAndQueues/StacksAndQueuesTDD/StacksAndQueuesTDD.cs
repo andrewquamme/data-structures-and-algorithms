@@ -10,7 +10,7 @@ namespace StacksAndQueuesTDD
         public void TestEmptyStackCreation()
         {
             Stack stack = new Stack();
-            Assert.Null(stack.Top);
+            Assert.Null(stack.Top.Value);
         }
 
         [Fact]
@@ -29,12 +29,12 @@ namespace StacksAndQueuesTDD
             Assert.Equal(1, stack.Peek());
         }
 
-        //[Fact]
-        //public void TestPeekAtEmptyStack()
-        //{
-        //    Stack stack = new Stack();
-        //    Assert.Throws<NullReferenceException>(()=>stack.Peek());
-        //}
+        [Fact]
+        public void TestPeekAtEmptyStack()
+        {
+            Stack stack = new Stack();
+            Assert.Null(stack.Peek());
+        }
 
         [Fact]
         public void TestPopFromStack()
@@ -55,11 +55,20 @@ namespace StacksAndQueuesTDD
         }
 
         [Fact]
+        public void TestEnqueueInEmptyQueue()
+        {
+            Queue queue = new Queue();
+            queue.Enqueue(5);
+            Assert.Equal(5, queue.Front.Value);
+        }
+
+        [Fact]
         public void TestEnqueue()
         {
             Queue queue = new Queue();
             queue.Enqueue(5);
-            Assert.Equal(5, queue.Rear.Value);
+            queue.Enqueue(4);
+            Assert.Equal(4, queue.Rear.Value);
         }
 
         [Fact]
@@ -75,6 +84,15 @@ namespace StacksAndQueuesTDD
         {
             Queue queue = new Queue();
             Assert.Null(queue.Peek());
+        }
+
+        [Fact]
+        public void TestDequeue()
+        {
+            Queue queue = new Queue();
+            queue.Enqueue(5);
+            queue.Enqueue(4);
+            Assert.Equal(5, queue.Dequeue().Value);
         }
     }
 }
