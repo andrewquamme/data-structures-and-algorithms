@@ -15,7 +15,6 @@ namespace StacksAndQueues.Classes
         public Stack()
         {
             Node node = new Node(null);
-            node.Next = null;
             Top = node;
         }
 

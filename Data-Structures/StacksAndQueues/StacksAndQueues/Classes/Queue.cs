@@ -13,7 +13,6 @@ namespace StacksAndQueues.Classes
         public Queue()
         {
             Node node = new Node(null);
-            node.Next = null;
             Rear = node;
             Front = node;
         }
@@ -26,7 +25,6 @@ namespace StacksAndQueues.Classes
         public void Enqueue(int value)
         {
             Node node = new Node(value);
-            node.Next = null;
             
             if (Front.Value == null)
             {
