@@ -7,8 +7,8 @@ namespace QueueWithStacks.Classes
 {
     public class PsuedoQueue
     {
-        Stack stackOne = new Stack();
-        Stack stackTwo = new Stack();
+        public Stack stackOne = new Stack();
+        public Stack stackTwo = new Stack();
 
         
         /// <summary>
