@@ -7,3 +7,4 @@
 * [Challenge: Linked List Kth From End](LinkedListKthFromEnd)
 * [Challenge: Linked List Merge](LinkedListMerge)
 * [Challenge: Queue with Stacks](QueueWithStacks)
+* [Challenge: FIFO Animal Shelter](FIFOAnimalShelter)
