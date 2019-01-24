@@ -9,3 +9,4 @@
 
 ## Solution
 <!-- Embedded whiteboard image -->
+![F I F O Animal Shelter](../../assets/FIFOAnimalShelter.jpeg)
