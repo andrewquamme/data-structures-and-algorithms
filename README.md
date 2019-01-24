@@ -9,3 +9,4 @@
 * [Challenge: Linked List Merge](Challenges/LinkedListMerge)
 * [Data Structure: Stacks and Queues](Data-Structures/StacksAndQueues)
 * [Challenge: Queue with Stacks](Challenges/QueueWithStacks)
+* [Challenge: FIFO Animal Shelter](Challenges/FIFOAnimalShelter)
