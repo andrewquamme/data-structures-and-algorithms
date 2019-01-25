@@ -1,13 +1,13 @@
-﻿using MultiBracketValidation.Classes;
+﻿using Multi_Bracket_Validation.Classes;
 using System;
 
-namespace MultiBracketValidation
+namespace Multi_Bracket_Validation
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            MultiBracketValidation("{}");
         }
 
         public static bool MultiBrackValidation(string input)
