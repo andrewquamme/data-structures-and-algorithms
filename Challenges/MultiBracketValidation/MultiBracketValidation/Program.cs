@@ -33,7 +33,7 @@ namespace MultiBracketValidation
                     }
                 }
             }
-            //if (stack.Peek() != null) return false;
+            if (stack.Peek() != null) return false;
 
             return true;
         }

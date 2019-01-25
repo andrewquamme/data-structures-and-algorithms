@@ -30,7 +30,7 @@ namespace MultiBracketValidationTDD
         [Fact]
         public void ExampleInput()
         {
-            string test = "[({}]";
+            string test = "({}[]";
             Assert.False(Program.MultiBrackValidation(test));
         }
     }
