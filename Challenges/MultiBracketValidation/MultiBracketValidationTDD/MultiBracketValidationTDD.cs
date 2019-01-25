@@ -12,5 +12,26 @@ namespace MultiBracketValidationTDD
             string test = "{}";
             Assert.True(Program.MultiBrackValidation(test));
         }
+
+        [Fact]
+        public void ExampleInputFive()
+        {
+            string test = "{}{Code}[Fellows](())";
+            Assert.True(Program.MultiBrackValidation(test));
+        }
+
+        [Fact]
+        public void ExampleInputSix()
+        {
+            string test = "[({}]";
+            Assert.False(Program.MultiBrackValidation(test));
+        }
+
+        [Fact]
+        public void ExampleInput()
+        {
+            string test = "[({}]";
+            Assert.False(Program.MultiBrackValidation(test));
+        }
     }
 }

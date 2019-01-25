@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MultiBracketValidation\Multi_Bracket_Validation.csproj" />
+    <ProjectReference Include="..\MultiBracketValidation\MultiBracketValidation.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,13 +1,13 @@
-﻿using Multi_Bracket_Validation.Classes;
+﻿using MultiBracketValidation.Classes;
 using System;
 
-namespace Multi_Bracket_Validation
+namespace MultiBracketValidation
 {
     public class Program
     {
         static void Main(string[] args)
         {
-            MultiBracketValidation("{}");
+            MultiBrackValidation("{}");
         }
 
         public static bool MultiBrackValidation(string input)
@@ -23,7 +23,7 @@ namespace Multi_Bracket_Validation
 
                 if (c == ')' || c == '}' || c == ']')
                 {
-                    if (stack.Peek().Value != c)
+                    if (!CheckMatchingBrace(stack.Peek().Value, c))
                     {
                         return false;
                     }
@@ -33,7 +33,14 @@ namespace Multi_Bracket_Validation
                     }
                 }
             }
+            //if (stack.Peek() != null) return false;
+
             return true;
+        }
+
+        public static bool CheckMatchingBrace(char a, char b)
+        {
+            return a == '(' && b == ')' || a == '[' && b == ']' || a == '{' && b == '}';
         }
     }
 }
