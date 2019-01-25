@@ -34,4 +34,26 @@ namespace MultiBracketValidationTDD
             Assert.False(Program.MultiBrackValidation(test));
         }
     }
+
+    public class CheckMatchingBracketsTests
+    {
+        [Fact]
+        public void TestMatchingParens()
+        {
+            Assert.True(Program.CheckMatchingBrackets('(',')'));
+        }
+
+        [Fact]
+        public void TestMatchingBrackets()
+        {
+            Assert.True(Program.CheckMatchingBrackets('[', ']'));
+        }
+
+        [Fact]
+        public void TestNoMatch()
+        {
+            Assert.False(Program.CheckMatchingBrackets('(', ']'));
+        }
+
+    }
 }
