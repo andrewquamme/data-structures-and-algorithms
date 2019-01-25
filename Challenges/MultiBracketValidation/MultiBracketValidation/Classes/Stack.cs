@@ -33,16 +33,12 @@ namespace MultiBracketValidation.Classes
         /// Pop top node from the stack and 
         /// return value to the user
         /// </summary>
-        /// <returns>Top Node Value</returns>
+        /// <returns>Top Node</returns>
         public Node Pop()
         {
-            // create a temp
             Node temp = Top;
-            //set top to the next node in the stack
             Top = Top.Next;
-            // clear the reference of next on the temp
             temp.Next = null;
-            // return the node
             return temp;
         }
 
@@ -50,7 +46,7 @@ namespace MultiBracketValidation.Classes
         /// Peek at the top Node on
         /// the stack
         /// </summary>
-        /// <returns>Top Node Value</returns>
+        /// <returns>Top Node</returns>
         public Node Peek()
         {
             return Top;
