@@ -7,7 +7,7 @@ namespace MultiBracketValidation
     {
         static void Main(string[] args)
         {
-            MultiBrackValidation("{}");
+            Console.WriteLine(MultiBrackValidation("{}"));
         }
 
         public static bool MultiBrackValidation(string input)
