@@ -20,6 +20,10 @@ To `Eneueue()` an animal, a check is performed to make sure it is a dog or cat. 
 
 To `Dequeue()` an animal, the queue is searched for the preferred animal. If `"Dog"`, `"Cat"`, or `""` (no preference) is not entered, the method returns null. The front animal in the queue is removed and checked for a match. If an immediate match is found, or there was no preference, the animal is returned. If no match is found, the animal is added back to the end of the queue and the next animal is removed and checked. When a match is found in the middle of the queue, the matching animal is stored while the rest of the queue is "carouseled" through the queue until the first animal is back in the front. The matching animal is then returned.
 
+### Big O
+Time: O(n)
+Space: O(1)
+
 ## Solution
 <!-- Embedded whiteboard image -->
 ![F I F O Animal Shelter](../../assets/FIFOAnimalShelter.jpeg)

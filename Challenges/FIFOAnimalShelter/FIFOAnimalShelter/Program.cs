@@ -14,9 +14,20 @@ namespace FIFOAnimalShelter
         static void FIFOAnimalShelter()
         {
             AnimalShelter shelter = new AnimalShelter();
-            shelter.Enqueue("Cat");
             shelter.Enqueue("Dog");
+            shelter.Enqueue("Dog");
+            shelter.Enqueue("Dog");
+            shelter.Enqueue("Dog");
+            shelter.Enqueue("Cat");
+            shelter.Enqueue("Cat");
             Console.WriteLine(shelter.Dequeue("cat").Value);
+            Console.WriteLine(shelter.Dequeue("cat").Value);
+            Console.WriteLine(shelter.Dequeue("cat").Value);
+            Console.WriteLine(shelter.Dequeue("dog").Value);
+            Console.WriteLine(shelter.Dequeue("dog").Value);
+            Console.WriteLine(shelter.Dequeue("dog").Value);
+            Console.WriteLine(shelter.Dequeue("dog").Value);
+            Console.WriteLine(shelter.Dequeue("dog").Value);
         }
     }
 }
