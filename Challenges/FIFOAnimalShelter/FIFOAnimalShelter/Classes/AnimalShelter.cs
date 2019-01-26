@@ -83,6 +83,7 @@ namespace FIFOAnimalShelter.Classes
                 else //put temp animal back into queue
                 {
                     Rear.Next = temp;
+                    Rear = temp;
                 }
             }
 
