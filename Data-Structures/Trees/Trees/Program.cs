@@ -16,7 +16,7 @@ namespace Trees
             testTree.Root.Left.Left = new Node(4);
             testTree.Root.Left.Right = new Node(5);
 
-            IList<int> results = testTree.InOrder(testTree.Root);
+            IList<int> results = testTree.PreOrder(testTree.Root);
             Console.WriteLine(results);
             foreach(int item in results)
             {
