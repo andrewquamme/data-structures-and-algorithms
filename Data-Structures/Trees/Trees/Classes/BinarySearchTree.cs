@@ -16,7 +16,6 @@ namespace Trees.Classes
             {
                 if (value == current.Value)
                 {
-
                     return;
                 }
                 else if (value < current.Value)
