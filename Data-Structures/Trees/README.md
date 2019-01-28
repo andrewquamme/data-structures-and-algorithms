@@ -22,7 +22,7 @@ Implement Binary Trees
   * Created an InOrder method that internally creates a list to hold all of the values then recursively steps through the tree caputuring each nodes value after going left and before going right. The values are returned as a list.
   * Created a PostOrder method that internally creates a list to hold all of the values then recursively steps through the tree caputuring each nodes value after going left and right. The values are returned as a list.
 * Created a BinarySearchTree class
-  * Created an Add method
+  * Created an Add method that traverses the BST until the proper leaf is found for addition
   * Created a Contains method that traverses the BST and returns a True/False if the value is found our not
 
 ### Efficiency
