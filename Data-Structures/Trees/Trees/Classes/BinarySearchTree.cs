@@ -6,12 +6,21 @@ namespace Trees.Classes
 {
     public class BinarySearchTree : BinaryTree
     {
-
+        /// <summary>
+        /// Adds new value to Binary Search Tree in "proper" spot
+        /// </summary>
+        /// <param name="value">Value to add</param>
         public void Add(int value)
         {
             Node newNode = new Node(value);
+
+            if(Root == null)
+            {
+                Root = newNode;
+            }
             Node current = Root;
             Node parent = null;
+
             while (current != null)
             {
                 if (value == current.Value)
