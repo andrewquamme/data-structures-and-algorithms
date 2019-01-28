@@ -165,7 +165,38 @@ namespace TreeTDD
         
         public class ContainsMethodTests
         {
+            [Fact]
+            public void TestTrue()
+            {
+                BinarySearchTree testTree = new BinarySearchTree();
+                testTree.Add(100);
+                testTree.Add(50);
+                testTree.Add(200);
+                testTree.Add(25);
+                testTree.Add(75);
+                testTree.Add(150);
+                Assert.True(testTree.Contains(25));
+            }
 
+            [Fact]
+            public void TestFalse()
+            {
+                BinarySearchTree testTree = new BinarySearchTree();
+                testTree.Add(100);
+                testTree.Add(50);
+                testTree.Add(200);
+                testTree.Add(25);
+                testTree.Add(75);
+                testTree.Add(150);
+                Assert.False(testTree.Contains(400));
+            }
+
+            [Fact]
+            public void TestEmptyTree()
+            {
+                BinarySearchTree testTree = new BinarySearchTree();
+                Assert.False(testTree.Contains(5));
+            }
         }
 
     }
