@@ -13,8 +13,14 @@ namespace Trees.Classes
         public void Add(int value)
         {
             Node newNode = new Node(value);
+
+            if(Root == null)
+            {
+                Root = newNode;
+            }
             Node current = Root;
             Node parent = null;
+
             while (current != null)
             {
                 if (value == current.Value)

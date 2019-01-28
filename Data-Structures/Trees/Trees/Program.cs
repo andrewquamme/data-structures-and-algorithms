@@ -9,15 +9,20 @@ namespace Trees
     {
         static void Main(string[] args)
         {
-            BinaryTree testTree = new BinaryTree();
-            testTree.Root = new Node(1);
-            testTree.Root.Left = new Node(2);
-            testTree.Root.Right = new Node(3);
-            testTree.Root.Left.Left = new Node(4);
-            testTree.Root.Left.Right = new Node(5);
-
+            BinarySearchTree testTree = new BinarySearchTree();
+            testTree.Add(100);
+            testTree.Add(50);
+            testTree.Add(200);
+            testTree.Add(25);
+            testTree.Add(75);
+            testTree.Add(150);
+            testTree.Add(300);
+            testTree.Add(60);
+            testTree.Add(90);
+            testTree.Add(342);
+            Console.WriteLine(testTree.Contains(90));
+            Console.WriteLine(testTree.Contains(1));
             IList<int> results = testTree.PreOrder(testTree.Root);
-            Console.WriteLine(results);
             foreach(int item in results)
             {
                 Console.WriteLine(item);

@@ -112,6 +112,43 @@ namespace TreeTDD
 
     public class BinarySearchTreeTests
     {
+        [Fact]
+        public void TestAdd()
+        {
+            BinarySearchTree testTree = new BinarySearchTree();
+            testTree.Add(100);
+            Assert.Equal(100, testTree.Root.Value);
+        }
+
+        [Fact]
+        public void TestAddOrder()
+        {
+            BinarySearchTree testTree = new BinarySearchTree();
+            testTree.Root = new Node(5);
+            testTree.Add(1);
+            Assert.Equal(1, testTree.Root.Left.Value);
+
+        }
+
+        [Fact]
+        public void TestMultiAddOrder()
+        {
+            BinarySearchTree testTree = new BinarySearchTree();
+            testTree.Add(100);
+            testTree.Add(50);
+            testTree.Add(200);
+            testTree.Add(25);
+            testTree.Add(75);
+            testTree.Add(150);
+            testTree.Add(300);
+            testTree.Add(60);
+            testTree.Add(90);
+            testTree.Add(342);
+            List<int> expected = new List<int> { 100, 50, 25, 75, 60, 90, 200, 150, 300, 342 };
+            IList<int> results = testTree.PreOrder(testTree.Root);
+            Assert.Equal(expected, results);
+        }
+
 
     }
 }
