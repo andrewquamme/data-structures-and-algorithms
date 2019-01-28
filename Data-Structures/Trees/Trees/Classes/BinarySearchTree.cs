@@ -6,6 +6,11 @@ namespace Trees.Classes
 {
     public class BinarySearchTree : BinaryTree
     {
+        /// <summary>
+        /// Determines if a Binary Tree contains a value
+        /// </summary>
+        /// <param name="value">Value to find</param>
+        /// <returns>True/False if found</returns>
          public bool Contains(int value)
          {
             Node current = Root;
