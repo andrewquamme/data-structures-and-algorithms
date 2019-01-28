@@ -11,3 +11,4 @@
 * [Challenge: Queue with Stacks](Challenges/QueueWithStacks)
 * [Challenge: FIFO Animal Shelter](Challenges/FIFOAnimalShelter)
 * [Challenge: Multi Bracket Validation](Challenges/MultiBracketValidation)
+* [Data Structure: Binary Trees](Data-Structures/Trees)
