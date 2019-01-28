@@ -12,6 +12,22 @@ Implement Binary Trees
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+### Approach
+* Created a  Node class.
+  * Properties: Value, Left, Right
+  
+* Created a Tree class.
+
+* Created a PreOrder method that internally creates a list to hold all of the values then recursively steps through the tree caputuring each nodes value before going left or right. The values are returned as a list.
+* Created an InOrder method that internally creates a list to hold all of the values then recursively steps through the tree caputuring each nodes value after going left and before going right. The values are returned as a list.
+* Created a PostOrder method that internally creates a list to hold all of the values then recursively steps through the tree caputuring each nodes value after going left and right. The values are returned as a list.
+
+### Efficiency
+**BinaryTree Traversal**
+Time: O(n)
+Space: O(h)
+
 
 ## API
 <!-- Description of each method publicly available in each of your trees -->
+BinaryTree class requires the Node class to be able to add nodes to the tree.
