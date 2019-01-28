@@ -109,4 +109,9 @@ namespace TreeTDD
             Assert.NotEqual(notExpected, testTree.PostOrder(testTree.Root));
         }
     }
+
+    public class BinarySearchTreeTests
+    {
+
+    }
 }
