@@ -1,5 +1,6 @@
 ﻿using BreadthFirstTraversal.Classes;
 using System;
+using System.Collections.Generic;
 
 namespace BreadthFirstTraversal
 {
@@ -19,13 +20,13 @@ namespace BreadthFirstTraversal
             BreadthFirst(tree.Root);
         }
 
-        public static void BreadthFirst(Node root)
+        public static List<int> BreadthFirst(Node root)
         {
-
+            List<int> values = new List<int>();
             if(root == null)
             {
                 Console.WriteLine("Tree is empty");
-                return;
+                return values;
             }
             Queue breadth = new Queue();
             breadth.Enqueue(root);
@@ -33,6 +34,7 @@ namespace BreadthFirstTraversal
             while (breadth.Peek() != null)
             {
                 Node front = breadth.Dequeue();
+                values.Add(front.Value);
                 Console.WriteLine(front.Value);
 
                 if (front.Left != null)
@@ -45,6 +47,7 @@ namespace BreadthFirstTraversal
                     breadth.Enqueue(front.Right);
                 }
             }
+            return values;
         }
     }
 }
