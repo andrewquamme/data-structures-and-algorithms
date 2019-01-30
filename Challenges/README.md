@@ -9,3 +9,5 @@
 * [Challenge: Queue with Stacks](QueueWithStacks)
 * [Challenge: FIFO Animal Shelter](FIFOAnimalShelter)
 * [Challenge: Multi Bracket Validation](MultiBracketValidation)
+* [Challenge: FizzBuzz Tree](FizzBuzzTree)
+* [Challenge: Binary Tree - Breadth First Traversal](BreadthFirstTraversal)
