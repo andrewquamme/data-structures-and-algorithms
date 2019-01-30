@@ -17,6 +17,12 @@ namespace FizzBuzzTree
             FizzBuzzTree(testTree.Root);
         }
 
+        /// <summary>
+        /// Take in a Tree by its Root, traverse, and change values to
+        /// Fizz, Buzz, or FizzBuzz
+        /// </summary>
+        /// <param name="root">Tree Root</param>
+        /// <returns>Tree Root</returns>
         public static Node FizzBuzzTree(Node root)
         {
             if (root == null) return root;
