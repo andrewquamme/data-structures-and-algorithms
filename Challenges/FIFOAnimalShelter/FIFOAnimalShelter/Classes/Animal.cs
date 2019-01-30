@@ -12,11 +12,12 @@ namespace FIFOAnimalShelter.Classes
         /// <summary>
         /// Creates new animal with Value
         /// </summary>
-        /// <param name="value">CAT or DOG</param>
-        public Animal(string value)
+        /// <param name="value">animal</param>
+        public Animal(string animal)
         {
-            if (value != null) Value = value.ToUpper();
-            else Value = value;
+            if (animal != null) animal = animal.ToUpper();
+            Value = animal;
+            
         }
     }
 }

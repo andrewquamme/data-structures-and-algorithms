@@ -19,12 +19,11 @@ namespace FIFOAnimalShelter.Classes
         /// Adds new animal to the Animal Shelter queue
         /// </summary>
         /// <param name="animalType">CAT or DOG</param>
-        public void Enqueue(string animalType)
+        public void Enqueue(Animal animal)
         {
-            animalType = animalType.ToUpper();
-            if (animalType == "CAT" || animalType == "DOG")
+            //Only cat, dog, and null allowed
+            if (animal.Value == "CAT" || animal.Value == "DOG")
             {
-                Animal animal = new Animal(animalType);
                 Total++;
                 if (Front == null)
                 {
@@ -67,9 +66,9 @@ namespace FIFOAnimalShelter.Classes
             {
                 count++;
                 //take front animal and make a temp animal
-                Animal temp = new Animal(Front.Value);
-                temp.Next = null;
+                Animal temp = Front;
                 Front = Front.Next;
+                temp.Next = null;
 
                 //If animal is a match OR no preference in animal
                 //and there has been no match already. If no preference,
@@ -78,16 +77,16 @@ namespace FIFOAnimalShelter.Classes
                 {
                     pet = temp;
                     match = true;
-                    Total--;
                 }
                 else //put temp animal back into queue
                 {
-                    Rear.Next = temp;
-                    Rear = temp;
+                    Total--;
+                    Enqueue(temp);
                 }
             }
 
             //return new pet
+            Total--;
             return pet;
         }
     }
