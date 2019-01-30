@@ -3,7 +3,7 @@ using FizzBuzzTree.Classes;
 
 namespace FizzBuzzTree
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -14,19 +14,20 @@ namespace FizzBuzzTree
             testTree.Root.Left.Left = new Node(15);
             testTree.Root.Left.Right = new Node(30);
 
-            FizzBuzzTree(testTree);
+            FizzBuzzTree(testTree.Root);
         }
 
-        public static Tree FizzBuzzTree(Tree tree)
+        /// <summary>
+        /// Take in a Tree by its Root, traverse, and change values to
+        /// Fizz, Buzz, or FizzBuzz
+        /// </summary>
+        /// <param name="root">Tree Root</param>
+        /// <returns>Tree Root</returns>
+        public static Node FizzBuzzTree(Node root)
         {
-            if (tree.Root == null) return tree;
-            FizzBuzzTreeHelper(tree.Root);
-            return tree;
-        }
+            if (root == null) return root;
 
-        public static void FizzBuzzTreeHelper(Node root)
-        {
-            if(Convert.ToInt32(root.Value) % 3 == 0 && Convert.ToInt32(root.Value) % 5 == 0)
+            if (Convert.ToInt32(root.Value) % 3 == 0 && Convert.ToInt32(root.Value) % 5 == 0)
             {
                 root.Value = "FizzBuzz";
             }
@@ -41,13 +42,16 @@ namespace FizzBuzzTree
 
             if (root.Left != null)
             {
-                FizzBuzzTreeHelper(root.Left);
+                FizzBuzzTree(root.Left);
             }
 
             if (root.Right != null)
             {
-                FizzBuzzTreeHelper(root.Right);
+                FizzBuzzTree(root.Right);
             }
+
+            return root;
         }
+
     }
 }
