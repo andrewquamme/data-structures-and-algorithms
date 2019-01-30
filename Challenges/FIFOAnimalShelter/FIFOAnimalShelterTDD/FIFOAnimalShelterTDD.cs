@@ -10,7 +10,7 @@ namespace FIFOAnimalShelterTDD
         public void TestEnqueueInvalidAnimal()
         {
             AnimalShelter shelter = new AnimalShelter();
-            shelter.Enqueue("Ferret");
+            shelter.Enqueue(new Animal("Ferret"));
             Assert.Null(shelter.Front);
         }
 
@@ -18,7 +18,7 @@ namespace FIFOAnimalShelterTDD
         public void TestEnqueue()
         {
             AnimalShelter shelter = new AnimalShelter();
-            shelter.Enqueue("Cat");
+            shelter.Enqueue(new Animal("Cat"));
             Assert.Equal("CAT", shelter.Front.Value);
         }
 
@@ -26,8 +26,8 @@ namespace FIFOAnimalShelterTDD
         public void TestMultiEnqueue()
         {
             AnimalShelter shelter = new AnimalShelter();
-            shelter.Enqueue("Dog");
-            shelter.Enqueue("Cat");
+            shelter.Enqueue(new Animal("Dog"));
+            shelter.Enqueue(new Animal("Cat"));
             Assert.Equal("CAT", shelter.Rear.Value);
         }
 
@@ -35,8 +35,8 @@ namespace FIFOAnimalShelterTDD
         public void TestShelterCounter()
         {
             AnimalShelter shelter = new AnimalShelter();
-            shelter.Enqueue("Dog");
-            shelter.Enqueue("Cat");
+            shelter.Enqueue(new Animal("Dog"));
+            shelter.Enqueue(new Animal("Cat"));
             Assert.Equal(2, shelter.Total);
         }
 
@@ -44,8 +44,8 @@ namespace FIFOAnimalShelterTDD
         public void TestDequeueInvalidAnimal()
         {
             AnimalShelter shelter = new AnimalShelter();
-            shelter.Enqueue("Dog");
-            shelter.Enqueue("Cat");
+            shelter.Enqueue(new Animal("Dog"));
+            shelter.Enqueue(new Animal("Cat"));
             Assert.Null(shelter.Dequeue("ferret").Value);
         }
 
@@ -53,8 +53,8 @@ namespace FIFOAnimalShelterTDD
         public void TestDequeueMatch()
         {
             AnimalShelter shelter = new AnimalShelter();
-            shelter.Enqueue("Dog");
-            shelter.Enqueue("Cat");
+            shelter.Enqueue(new Animal("Dog"));
+            shelter.Enqueue(new Animal("Cat"));
             Assert.Equal("CAT", shelter.Dequeue("cat").Value);
         }
 
@@ -62,8 +62,8 @@ namespace FIFOAnimalShelterTDD
         public void TestCountAfterDequeueMatch()
         {
             AnimalShelter shelter = new AnimalShelter();
-            shelter.Enqueue("Dog");
-            shelter.Enqueue("Cat");
+            shelter.Enqueue(new Animal("Dog"));
+            shelter.Enqueue(new Animal("Cat"));
             shelter.Dequeue("cat");
             Assert.Equal(1, shelter.Total);
         }
@@ -72,8 +72,8 @@ namespace FIFOAnimalShelterTDD
         public void TestFrontAfterDequeueMatch()
         {
             AnimalShelter shelter = new AnimalShelter();
-            shelter.Enqueue("Dog");
-            shelter.Enqueue("Cat");
+            shelter.Enqueue(new Animal("Dog"));
+            shelter.Enqueue(new Animal("Cat"));
             shelter.Dequeue("dog");
             Assert.Equal("CAT", shelter.Front.Value);
         }
@@ -82,11 +82,12 @@ namespace FIFOAnimalShelterTDD
         public void TestQueueLoopAfterMatch()
         {
             AnimalShelter shelter = new AnimalShelter();
-            shelter.Enqueue("Dog");
-            shelter.Enqueue("Dog");
-            shelter.Enqueue("Dog");
-            shelter.Enqueue("Dog");
-            shelter.Enqueue("Cat");
+            shelter.Enqueue(new Animal("Dog"));
+            shelter.Enqueue(new Animal("Dog"));
+            shelter.Enqueue(new Animal("Dog"));
+            shelter.Enqueue(new Animal("Dog"));
+            shelter.Enqueue(new Animal("Cat"));
+            shelter.Enqueue(new Animal("Cat"));
             shelter.Dequeue("cat");
             Assert.Equal("DOG", shelter.Front.Value);
         }
@@ -95,11 +96,11 @@ namespace FIFOAnimalShelterTDD
         public void TestNoMatch()
         {
             AnimalShelter shelter = new AnimalShelter();
-            shelter.Enqueue("Dog");
-            shelter.Enqueue("Dog");
-            shelter.Enqueue("Dog");
-            shelter.Enqueue("Dog");
-            shelter.Enqueue("Dog");
+            shelter.Enqueue(new Animal("Dog"));
+            shelter.Enqueue(new Animal("Dog"));
+            shelter.Enqueue(new Animal("Dog"));
+            shelter.Enqueue(new Animal("Dog"));
+            shelter.Enqueue(new Animal("Dog"));
             Assert.Null(shelter.Dequeue("cat").Value);
         }
     }
