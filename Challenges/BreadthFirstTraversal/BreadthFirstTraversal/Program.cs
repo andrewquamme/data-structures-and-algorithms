@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace BreadthFirstTraversal
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -20,6 +20,13 @@ namespace BreadthFirstTraversal
             BreadthFirst(tree.Root);
         }
 
+        /// <summary>
+        /// Takes in a tree by its Root node and performs a
+        /// breadth-first traversal of the tree, outputting
+        /// each value to the console and adding to a list
+        /// </summary>
+        /// <param name="root">Root Node of Tree</param>
+        /// <returns>List of Values</returns>
         public static List<int> BreadthFirst(Node root)
         {
             List<int> values = new List<int>();
