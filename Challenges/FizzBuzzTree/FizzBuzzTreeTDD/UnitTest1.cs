@@ -16,7 +16,7 @@ namespace FizzBuzzTreeTDD
             testTree.Root.Right = new Node(5);
             testTree.Root.Left.Left = new Node(15);
             testTree.Root.Left.Right = new Node(30);
-            Program.FizzBuzzTree(testTree);
+            Program.FizzBuzzTree(testTree.Root);
 
             Object[] expected = {
                 "Fizz",
