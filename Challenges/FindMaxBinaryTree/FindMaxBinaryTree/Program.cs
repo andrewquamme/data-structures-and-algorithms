@@ -3,7 +3,7 @@ using System;
 
 namespace FindMaxBinaryTree
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -25,8 +25,8 @@ namespace FindMaxBinaryTree
         /// <returns>Max Value</returns>
         public static int? FindMaxValue(Tree tree)
         {
-            int max = 0;
             if (tree.Root == null) return null;
+            int max = tree.Root.Value;
             max = InOrder(tree.Root, max);
             return max;
         }
