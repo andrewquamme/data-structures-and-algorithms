@@ -42,3 +42,15 @@ Space: O(1)
 ## API
 <!-- Description of each method publicly available in each of your trees -->
 BinaryTree and BinarySearchTree classes require the Node class to be able to add nodes to the tree.
+### Binary Tree
+#### PreOrder(root)
+Performs a PRE-Order traversal of a tree from the tree root and addes each node to a retults list. Results list is returned at end of traversal.
+#### InOrder(root)
+Performs a IN-Order traversal of a tree from the tree root and addes each node to a retults list. Results list is returned at end of traversal.
+#### PostOrder(root)
+Performs a Post-Order traversal of a tree from the tree root and addes each node to a retults list. Results list is returned at end of traversal.
+### Binary Search Tree
+#### Add(value)
+Add an int to the binary search tree--in proper order.
+#### Contains(value)
+Determine if a given tree conains a supplied integer. Uses in In-Order traversal to compare each node to the application.
