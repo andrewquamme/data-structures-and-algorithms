@@ -14,3 +14,4 @@
 * [Data Structure: Binary Trees](Data-Structures/Trees)
 * [Challenge: FizzBuzz Tree](Challenges/FizzBuzzTree)
 * [Challenge: Binary Tree - Breadth First Traversal](Challenges/BreadthFirstTraversal)
+* [Challenge: Binary Tree - Find Maximum Value](Challenges/FindMaxBinaryTree)
