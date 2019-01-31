@@ -11,3 +11,4 @@
 * [Challenge: Multi Bracket Validation](MultiBracketValidation)
 * [Challenge: FizzBuzz Tree](FizzBuzzTree)
 * [Challenge: Binary Tree - Breadth First Traversal](BreadthFirstTraversal)
+* [Challenge: Binary Tree - Find Maximum Value](FindMaxBinaryTree)
