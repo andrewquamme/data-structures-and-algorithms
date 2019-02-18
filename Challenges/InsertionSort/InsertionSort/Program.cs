@@ -12,7 +12,7 @@ namespace InsertionSort
 
         public static void InsertionSort(int[] arr)
         {
-            for(int i=1; i < arr.Length; i++)
+            for(int i = 1; i < arr.Length; i++)
             {
                 int j = i - 1;
                 int temp = arr[i];
