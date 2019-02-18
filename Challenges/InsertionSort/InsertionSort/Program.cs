@@ -8,5 +8,10 @@ namespace InsertionSort
         {
             Console.WriteLine("Hello World!");
         }
+
+        public void InsertionSort()
+        {
+
+        }
     }
 }
