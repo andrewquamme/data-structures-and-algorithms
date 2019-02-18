@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTreeSumOfOdds", "BinaryTreeSumOfOdds\BinaryTreeSumOfOdds.csproj", "{0D724E81-4B07-44CD-9DF3-6A46C2E5091D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTreeSumOfOddsTDD", "BinaryTreeSumOfOddsTDD\BinaryTreeSumOfOddsTDD.csproj", "{30064798-094F-4E66-B934-A4AFD4E8F24F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D724E81-4B07-44CD-9DF3-6A46C2E5091D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D724E81-4B07-44CD-9DF3-6A46C2E5091D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D724E81-4B07-44CD-9DF3-6A46C2E5091D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D724E81-4B07-44CD-9DF3-6A46C2E5091D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30064798-094F-4E66-B934-A4AFD4E8F24F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30064798-094F-4E66-B934-A4AFD4E8F24F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30064798-094F-4E66-B934-A4AFD4E8F24F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30064798-094F-4E66-B934-A4AFD4E8F24F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DBE23878-4D9B-4EFC-8F1B-EFC4FF562EA7}
+	EndGlobalSection
+EndGlobal
