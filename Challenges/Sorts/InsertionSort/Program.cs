@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace InsertionSort
+namespace Sorts
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
