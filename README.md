@@ -17,3 +17,4 @@
 * [Challenge: Binary Tree - Find Maximum Value](Challenges/FindMaxBinaryTree)
 * [Data Structure: Hashtable](Data-Structures/Hashtable)
 * [Challenge: Insertion Sort](Challenges/Sorts)
+* [Challenge: Repeated Word](Challenges/RepeatedWord)
