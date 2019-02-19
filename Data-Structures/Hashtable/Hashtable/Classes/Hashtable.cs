@@ -41,9 +41,11 @@ namespace HashTable.Classes
         /// <param name="value">Value to add</param>
         public void Add(string key, string value)
         {
-            if (Contains(key))
+            if (HT[Hash(key)] != null)
             {
-                HT[Hash(key)].Next = new Node(key, value);
+                Node tempNode = HT[Hash(key)];
+                HT[Hash(key)] = new Node(key, value);
+                HT[Hash(key)].Next = tempNode;
             }
             else
             {
@@ -76,7 +78,14 @@ namespace HashTable.Classes
             }
             else
             {
-                return true;
+                Node node = HT[Hash(key)];
+                if (node.Key == key) return true;
+                while(node.Next != null)
+                {
+                    node = node.Next;
+                    if (node.Key == key) return true;
+                }
+                return false;
             }
         }
     }
