@@ -60,6 +60,25 @@ namespace HashtableTDD
         }
 
         [Fact]
+        public void TestContainsWithCollision()
+        {
+            Hashtable testHT = new Hashtable(1024);
+            testHT.Add("brainy", "test1");
+            testHT.Add("binary", "test2");
+            Assert.True(testHT.Contains("brainy"));
+        }
+
+        [Fact]
+        public void TestContainsWithMultiCollision()
+        {
+            Hashtable testHT = new Hashtable(1024);
+            testHT.Add("brainy", "test1");
+            testHT.Add("binary", "test2");
+            testHT.Add("nibray", "test3");
+            Assert.True(testHT.Contains("brainy"));
+        }
+
+        [Fact]
         public void TestDoesNotContain()
         {
             Hashtable testHT = new Hashtable(1024);

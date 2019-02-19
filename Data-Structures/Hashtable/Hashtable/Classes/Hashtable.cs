@@ -61,7 +61,16 @@ namespace HashTable.Classes
         /// <returns>Value</returns>
         public string Get(string key)
         {
-            if(Contains(key)) return HT[Hash(key)].Value;
+            if (Contains(key))
+            {
+                if (HT[Hash(key)].Key == key) return HT[Hash(key)].Value;
+                Node tempNode = HT[Hash(key)];
+                while (tempNode.Next != null)
+                {
+                    tempNode = tempNode.Next;
+                    if (tempNode.Key == key) return tempNode.Value;
+                }
+            }
             return null;
         }
 
@@ -78,15 +87,15 @@ namespace HashTable.Classes
             }
             else
             {
-                Node node = HT[Hash(key)];
-                if (node.Key == key) return true;
-                while(node.Next != null)
+                if (HT[Hash(key)].Key == key) return true;
+                Node tempNode = HT[Hash(key)];
+                while(tempNode.Next != null)
                 {
-                    node = node.Next;
-                    if (node.Key == key) return true;
+                    tempNode = tempNode.Next;
+                    if (tempNode.Key == key) return true;
                 }
-                return false;
             }
+            return false;
         }
     }
 }
