@@ -9,11 +9,20 @@ namespace HashTable.Classes
     {
         public Node[] HT { get; set; }
 
+        /// <summary>
+        /// Creates Hashtable array with n buckets
+        /// </summary>
+        /// <param name="buckets">Num of buckets in Hashtable</param>
         public Hashtable(int buckets)
         {
             HT = new Node[buckets];
         }
 
+        /// <summary>
+        /// Hashes a key and returns an integer
+        /// </summary>
+        /// <param name="key">Key to hash</param>
+        /// <returns>Integer</returns>
         public int Hash(string key)
         {
             int index = 0;
