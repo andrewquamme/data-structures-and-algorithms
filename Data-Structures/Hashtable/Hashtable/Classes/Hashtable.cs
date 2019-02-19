@@ -37,9 +37,10 @@ namespace HashTable.Classes
             return HT[Hash(key)].Value;
         }
 
-        public void Contains()
+        public bool Contains(string key)
         {
-
+            if (HT[Hash(key)] != null) return true;
+            return false;
         }
     }
 }
