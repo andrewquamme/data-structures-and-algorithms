@@ -77,6 +77,13 @@ namespace HashtableTDD
                 testHT.Add("binary", "test3");
                 Assert.Equal("test1", testHT.Get("ribnay"));
             }
+
+            [Fact]
+            public void TestGetNotFound()
+            {
+                Hashtable testHT = new Hashtable(1024);
+                Assert.Null(testHT.Get("ferret"));
+            }
         }
         
         public class ContainsTests
