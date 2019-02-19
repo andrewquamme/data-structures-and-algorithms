@@ -38,8 +38,9 @@ namespace HashtableTDD
             Hashtable testHT = new Hashtable(1024);
             testHT.Add("brainy", "test1");
             testHT.Add("binary", "test2");
+            testHT.Add("nibray", "test3");
             int index = testHT.Hash("brainy");
-            Assert.Equal("test2", testHT.HT[index].Value);
+            Assert.Equal("test1", testHT.HT[index].Next.Next.Value);
         }
 
         [Fact]
