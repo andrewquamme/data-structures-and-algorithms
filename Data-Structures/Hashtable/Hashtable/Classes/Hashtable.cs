@@ -32,9 +32,9 @@ namespace HashTable.Classes
             HT[Hash(key)] = new Node(key, value);
         }
 
-        public void Get()
+        public string Get(string key)
         {
-
+            return HT[Hash(key)].Value;
         }
 
         public void Contains()
