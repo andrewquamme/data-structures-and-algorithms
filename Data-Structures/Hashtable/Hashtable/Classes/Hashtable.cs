@@ -17,12 +17,10 @@ namespace HashTable.Classes
         public int Hash(string key)
         {
             int index = 0;
-
             for (int i = 0; i<key.Length; i++)
             {
                 index += Convert.ToInt32(key[i]);
             }
-
             index = (index * 599) / HT.Length;
             return index;
         }
