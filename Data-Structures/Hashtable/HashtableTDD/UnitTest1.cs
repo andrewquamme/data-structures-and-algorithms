@@ -37,5 +37,13 @@ namespace HashtableTDD
             testHT.Add("brainy", "test");
             Assert.True(testHT.Contains("brainy"));
         }
+
+        [Fact]
+        public void TestDoesNotContain()
+        {
+            Hashtable testHT = new Hashtable(1024);
+            testHT.Add("brainy", "test");
+            Assert.False(testHT.Contains("ferret"));
+        }
     }
 }
