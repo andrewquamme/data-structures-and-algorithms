@@ -32,7 +32,8 @@ namespace HashTable.Classes
 
         public string Get(string key)
         {
-            return HT[Hash(key)].Value;
+            if(Contains(key)) return HT[Hash(key)].Value;
+            return "";
         }
 
         public bool Contains(string key)
