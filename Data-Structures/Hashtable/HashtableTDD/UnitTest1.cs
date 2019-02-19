@@ -7,6 +7,13 @@ namespace HashtableTDD
     public class HashtableTDD
     {
         [Fact]
+        public void TestHash()
+        {
+            Hashtable testHT = new Hashtable(1024);
+            Assert.Equal(377, testHT.Hash("brainy"));
+        }
+
+        [Fact]
         public void TestAdd()
         {
             Hashtable testHT = new Hashtable(1024);
