@@ -27,9 +27,9 @@ namespace HashTable.Classes
             return index;
         }
 
-        public void Add()
+        public void Add(string key, string value)
         {
-
+            HT[Hash(key)] = new Node(key, value);
         }
 
         public void Get()

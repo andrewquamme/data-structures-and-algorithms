@@ -8,7 +8,9 @@ namespace HashTable
         static void Main(string[] args)
         {
             Hashtable testHT = new Hashtable(1024);
-            Console.WriteLine(Hashtable.Hash("ferret"));
+            testHT.Add("brainy", "test");
+
+            Console.WriteLine(Hashtable.Hash("brainy"));
         }
     }
 }
