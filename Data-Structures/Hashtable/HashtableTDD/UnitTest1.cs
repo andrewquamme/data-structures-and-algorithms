@@ -23,6 +23,16 @@ namespace HashtableTDD
         }
 
         [Fact]
+        public void TestAddCollision()
+        {
+            Hashtable testHT = new Hashtable(1024);
+            testHT.Add("brainy", "test1");
+            testHT.Add("binary", "test2");
+            int index = testHT.Hash("brainy");
+            Assert.Equal("test2", testHT.HT[index].Next.Value);
+        }
+
+        [Fact]
         public void TestGet()
         {
             Hashtable testHT = new Hashtable(1024);

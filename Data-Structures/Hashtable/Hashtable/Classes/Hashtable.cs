@@ -70,8 +70,14 @@ namespace HashTable.Classes
         /// <returns>True/False</returns>
         public bool Contains(string key)
         {
-            if (HT[Hash(key)] != null) return true;
-            return false;
+            if (HT[Hash(key)] == null)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }
