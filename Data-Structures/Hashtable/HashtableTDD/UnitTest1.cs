@@ -58,6 +58,15 @@ namespace HashtableTDD
                 testHT.Add("brainy", "test");
                 Assert.Equal("test", testHT.Get("brainy"));
             }
+
+            [Fact]
+            public void TestGetWithCollision()
+            {
+                Hashtable testHT = new Hashtable(1024);
+                testHT.Add("brainy", "test1");
+                testHT.Add("binary", "test2");
+                Assert.Equal("test1", testHT.Get("brainy"));
+            }
         }
         
         public class ContainsTests
