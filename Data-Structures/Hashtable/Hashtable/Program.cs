@@ -10,7 +10,7 @@ namespace HashTable
             Hashtable testHT = new Hashtable(1024);
             testHT.Add("brainy", "test");
 
-            Console.WriteLine(Hashtable.Hash("brainy"));
+            Console.WriteLine(testHT.Hash("brainy"));
         }
     }
 }

@@ -7,14 +7,14 @@ namespace HashTable.Classes
 {
     public class Hashtable
     {
-        public static Node[] HT { get; set; }
+        public Node[] HT { get; set; }
 
         public Hashtable(int buckets)
         {
             HT = new Node[buckets];
         }
 
-        public static int Hash(string key)
+        public int Hash(string key)
         {
             int index = 0;
 
