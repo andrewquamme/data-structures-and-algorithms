@@ -67,6 +67,16 @@ namespace HashtableTDD
                 testHT.Add("binary", "test2");
                 Assert.Equal("test1", testHT.Get("brainy"));
             }
+
+            [Fact]
+            public void TestGetWithMultiCollisions()
+            {
+                Hashtable testHT = new Hashtable(1024);
+                testHT.Add("ribnay", "test1");
+                testHT.Add("brainy", "test2");
+                testHT.Add("binary", "test3");
+                Assert.Equal("test1", testHT.Get("ribnay"));
+            }
         }
         
         public class ContainsTests
