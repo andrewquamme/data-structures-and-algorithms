@@ -10,6 +10,11 @@ namespace HashTable.Classes
         public string Value { get; set; }
         public Node Next { get; set; }
 
+        /// <summary>
+        /// Creates a Node with Key and Value
+        /// </summary>
+        /// <param name="key">Key</param>
+        /// <param name="value">Value</param>
         public Node(string key, string value)
         {
             Key = key;
