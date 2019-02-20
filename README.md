@@ -16,5 +16,5 @@
 * [Challenge: Binary Tree - Breadth First Traversal](Challenges/BreadthFirstTraversal)
 * [Challenge: Binary Tree - Find Maximum Value](Challenges/FindMaxBinaryTree)
 * [Data Structure: Hashtable](Data-Structures/Hashtable)
-* [Challenge: Insertion Sort](Challenges/Sorts)
+* [Data Structure: Insertion Sort](Data-Structures/InsertionSort)
 * [Challenge: Repeated Word](Challenges/RepeatedWord)

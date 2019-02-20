@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sorts", "InsertionSort\Sorts.csproj", "{9DFCDB8B-AAC0-4E65-95F7-136281C15F67}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsertionSort", "InsertionSort\InsertionSort.csproj", "{9DFCDB8B-AAC0-4E65-95F7-136281C15F67}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortsTDD", "XUnitTestProject1\SortsTDD.csproj", "{C987AAF3-6240-4AA1-9EB5-43D5221E1714}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsertionSortTDD", "XUnitTestProject1\InsertionSortTDD.csproj", "{C987AAF3-6240-4AA1-9EB5-43D5221E1714}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

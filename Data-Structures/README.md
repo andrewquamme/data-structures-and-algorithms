@@ -6,3 +6,4 @@
 * [Data Structure: Stacks and Queues](StacksAndQueues)
 * [Data Structure: Binary Trees](Trees)
 * [Data Structure: Hash Table](Hashtable)
+* [Data Structure: Insertion Sort](InsertionSort)

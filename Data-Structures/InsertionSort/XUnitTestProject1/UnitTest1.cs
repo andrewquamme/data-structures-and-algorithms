@@ -1,8 +1,8 @@
 using System;
 using Xunit;
-using Sorts;
+using InsertionSort;
 
-namespace SortsTDD
+namespace InsertionSortTDD
 {
     public class InsertionSortTests
     {
