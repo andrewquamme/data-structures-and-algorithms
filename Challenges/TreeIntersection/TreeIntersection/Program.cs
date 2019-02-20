@@ -28,8 +28,8 @@ namespace TreeIntersection
 
         public static IList<int> TreeIntersection(BinaryTree t1, BinaryTree t2)
         {
-            var t1Vals = t1.InOrder(t1.Root);
-            var t2Vals = t2.InOrder(t2.Root);
+            IList<int> t1Vals = t1.InOrder(t1.Root);
+            IList<int> t2Vals = t2.InOrder(t2.Root);
             List<int> commonValues = new List<int>();
             Hashtable treeTable = new Hashtable(1024);
 
