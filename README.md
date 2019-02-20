@@ -18,3 +18,4 @@
 * [Data Structure: Hashtable](Data-Structures/Hashtable)
 * [Data Structure: Insertion Sort](Data-Structures/InsertionSort)
 * [Challenge: Repeated Word](Challenges/RepeatedWord)
+* [Challenge: Tree Intersection](Challenges/TreeIntersection)

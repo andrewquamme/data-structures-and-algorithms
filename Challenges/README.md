@@ -13,3 +13,4 @@
 * [Challenge: Binary Tree - Breadth First Traversal](BreadthFirstTraversal)
 * [Challenge: Binary Tree - Find Maximum Value](FindMaxBinaryTree)
 * [Challenge: Repeated Word](RepeatedWord)
+* [Challenge: Tree Intersection](TreeIntersection)
