@@ -8,11 +8,11 @@ namespace LeftJoin
     {
         static void Main(string[] args)
         {
-            Hashtable synHT = new Hashtable(1024);
+            Hashtable synHT = new Hashtable(50);
             synHT.Add("fond", "enamored");
             synHT.Add("outfit", "garb");
 
-            Hashtable antHT = new Hashtable(1024);
+            Hashtable antHT = new Hashtable(50);
             antHT.Add("fond", "averse");
 
             IList<string> results = LeftJoin(synHT, antHT);
