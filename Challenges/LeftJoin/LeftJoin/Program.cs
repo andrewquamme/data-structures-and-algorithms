@@ -18,6 +18,12 @@ namespace LeftJoin
             IList<string> results = LeftJoin(synHT, antHT);
         }
 
+        /// <summary>
+        /// Performs a LEFT JOIN of a synonym and antonym hashtable
+        /// </summary>
+        /// <param name="hash1">Synonym hashtable</param>
+        /// <param name="hash2">Antonym hashtable</param>
+        /// <returns>List of words with their synonyms and antonyms</returns>
         public static IList<string> LeftJoin(Hashtable hash1, Hashtable hash2)
         {
             List<string> results = new List<string>();
@@ -31,6 +37,10 @@ namespace LeftJoin
                     if (hash2.Contains(node.Key))
                     {
                         values += $", Antonym: {hash2.Get(node.Key)}";
+                    }
+                    else
+                    {
+                        values += $", Antonym: NONE";
                     }
 
                     results.Add(values);
