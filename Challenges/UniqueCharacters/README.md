@@ -1,4 +1,4 @@
-# Unique Characters in String
+# Unique Characters in a String
 <!-- Short summary or background information -->
 Determine if a string is full of unique characters
 ## Challenge
