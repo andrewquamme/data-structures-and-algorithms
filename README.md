@@ -20,3 +20,4 @@
 * [Challenge: Repeated Word](Challenges/RepeatedWord)
 * [Challenge: Tree Intersection](Challenges/TreeIntersection)
 * [Challenge: Hashmap Left Join](Challenges/LeftJoin)
+* [Challenge: Unique Characters in a String](Challenges/UniqueCharacters)
