@@ -7,7 +7,7 @@ namespace UniqueCharacters
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(UniqueCharacters("brown dog"));
+            Console.WriteLine(UniqueCharacters("BROWN dog"));
         }
 
         public static bool UniqueCharacters(string str)
@@ -15,7 +15,7 @@ namespace UniqueCharacters
             Hashtable HT = new Hashtable(1024);
             for (int i = 0; i < str.Length; i++)
             {
-                string character = Convert.ToString(str[i]);
+                string character = Convert.ToString(str[i]).ToUpper();
 
                 if (HT.Contains(character)) return false;
 
