@@ -15,3 +15,4 @@
 * [Challenge: Repeated Word](RepeatedWord)
 * [Challenge: Tree Intersection](TreeIntersection)
 * [Challenge: Hashmap Left Join](LeftJoin)
+* [Challenge: Unique Characters in a String](UniqueCharacters)
