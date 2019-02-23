@@ -19,7 +19,7 @@ namespace RepeatedWord
         /// <returns>first repeated word</returns>
         public static string RepeatedWord(string book)
         {
-            if (book == null) return "Not a valid string";
+            if (book == null) return "String is null";
 
             string[] words = book.Split(' ');
             Hashtable HT = new Hashtable(1024);
