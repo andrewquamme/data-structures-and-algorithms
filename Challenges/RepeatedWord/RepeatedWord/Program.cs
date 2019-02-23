@@ -19,6 +19,8 @@ namespace RepeatedWord
         /// <returns>first repeated word</returns>
         public static string RepeatedWord(string book)
         {
+            if (book == null) return "Not a valid string";
+
             string[] words = book.Split(' ');
             Hashtable HT = new Hashtable(1024);
             foreach (string word in words)
