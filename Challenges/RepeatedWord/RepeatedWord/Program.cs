@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HashTable.Classes;
+using System;
 
 namespace RepeatedWord
 {
@@ -10,15 +11,23 @@ namespace RepeatedWord
             Console.WriteLine(RepeatedWord(str));
         }
 
+        /// <summary>
+        /// Takes a long string and returns the first repeated word
+        /// Returns "No repeated words" if none found
+        /// </summary>
+        /// <param name="book">long string</param>
+        /// <returns>first repeated word</returns>
         public static string RepeatedWord(string book)
         {
             string[] words = book.Split(' ');
-            for (int i = 0; i < words.Length - 1; i++)
+            Hashtable HT = new Hashtable(1024);
+            foreach (string word in words)
             {
-                for (int j = i + 1; j < words.Length; j++)
+                if (HT.Contains(word))
                 {
-                    if (words[i] == words[j]) return words[i];
+                    return word;
                 }
+                HT.Add(word, word);
             }
             return "No repeated words";
         }
