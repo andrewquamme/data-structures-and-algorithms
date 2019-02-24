@@ -3,7 +3,7 @@ using System;
 
 namespace UniqueCharacters
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -18,6 +18,7 @@ namespace UniqueCharacters
         public static bool UniqueCharacters(string str)
         {
             Hashtable HT = new Hashtable(1024);
+
             for (int i = 0; i < str.Length; i++)
             {
                 string character = Convert.ToString(str[i]).ToUpper();
