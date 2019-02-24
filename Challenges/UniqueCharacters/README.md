@@ -12,6 +12,3 @@ This challenge was approached using a Hashtable created in a previous data struc
 ### Big O
 Time: O(n)
 Space: O(n)
-
-## Solution
-<!-- Embedded whiteboard image -->
