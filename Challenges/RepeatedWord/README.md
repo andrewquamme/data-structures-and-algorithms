@@ -14,3 +14,4 @@ Time: O(n)
 Space: O(n)
 ## Solution
 <!-- Embedded whiteboard image -->
+![Repeated Word](../../assets/RepeatedWord.jpeg)
