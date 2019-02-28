@@ -17,3 +17,4 @@ Space O(n)
 
 ## Solution
 <!-- Embedded whiteboard image -->
+![Tree Intersection](../../assets/TreeIntersection.jpeg)

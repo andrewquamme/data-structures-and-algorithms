@@ -26,11 +26,18 @@ namespace TreeIntersection
             IList<int> results = TreeIntersection(testTree1, testTree2);
         }
 
+        /// <summary>
+        /// Performs intersection of two binary trees, returning 
+        /// shared values of the two
+        /// </summary>
+        /// <param name="t1">Tree One</param>
+        /// <param name="t2">Tree Two</param>
+        /// <returns>Shared Values</returns>
         public static IList<int> TreeIntersection(BinaryTree t1, BinaryTree t2)
         {
             IList<int> t1Vals = t1.InOrder(t1.Root);
             IList<int> t2Vals = t2.InOrder(t2.Root);
-            List<int> commonValues = new List<int>();
+            List<int> sharedValues = new List<int>();
             Hashtable treeTable = new Hashtable(1024);
 
             foreach(int val in t1Vals)
@@ -42,11 +49,11 @@ namespace TreeIntersection
             {
                 if (treeTable.Contains(val))
                 {
-                    commonValues.Add(val);
+                    sharedValues.Add(val);
                 }
             }
 
-            return commonValues;
+            return sharedValues;
         }
     }
 }
