@@ -14,6 +14,9 @@ LEFT JOIN means all the values in the first hashmap are returned, and if values 
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 To approach this challenge, I created a method that takes in a synonym and antonym hashtable. The method then goes through the synonym hashtable looking for keys. When a key is found, the word and its synonym are added to a string. The method then checks if the key exists in the antonym hashtable. If it does, the antonym is appended to the string. This string is then added to a list. When the end of the hashtable is reached, the list is returned by the method.
 ### Big O
+Time: O(n)
+Space: O(n)
 
 ## Solution
 <!-- Embedded whiteboard image -->
+![Left Join](../../assets/LeftJoin.jpeg)
