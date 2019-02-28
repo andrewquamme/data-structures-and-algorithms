@@ -11,7 +11,7 @@ namespace RepeatedWord_TDD
         public void EmptyString()
         {
             string testString = null;
-            Assert.Equal("Not a valid string", Program.RepeatedWord(testString));
+            Assert.Equal("String is null", Program.RepeatedWord(testString));
         }
 
         [Fact]
